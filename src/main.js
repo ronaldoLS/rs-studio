@@ -2,8 +2,17 @@ import './style.css'
 
 document.querySelector('#app').innerHTML = `
   <header>
-        <!-- Navbar -->
-    </header>
+    <nav>
+        <a href="#">RS Studio</a>
+
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
 
     <main>
 
