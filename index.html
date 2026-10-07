@@ -1,13 +1,95 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RS Studio</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RS Studio</title>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <nav>
+        <a href="#">RS Studio</a>
+
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <section id="hero" class="min-h-screen flex items-center">
+        <div class="max-w-6xl mx-auto px-6 py-20 w-full">
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- Conteúdo -->
+            <div>
+              <p class="text-sm font-semibold tracking-widest uppercase mb-4">
+                Desenvolvimento · Design · Experiências Interativas
+              </p>
+
+              <h1 class="text-5xl md:text-6xl font-bold max-w-3xl mb-6">
+                Ideias que ganham forma no digital.
+              </h1>
+
+              <p class="text-lg max-w-2xl mb-8">
+                A RS Studio cria soluções web, identidades visuais
+                e experiências interativas para ajudar pessoas e
+                empresas a se destacarem no mundo digital.
+              </p>
+
+              <div class="flex flex-wrap gap-4">
+                <a href="#projetos" class="px-6 py-3 rounded-lg font-semibold">
+                  Ver projetos
+                </a>
+
+                <a href="#contato" class="px-6 py-3 rounded-lg font-semibold border">
+                  Entrar em contacto
+                </a>
+              </div>
+            </div>
+
+            <!-- Área visual -->
+            <div>
+              <!-- Elemento visual do Hero será definido posteriormente -->
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section id="sobre">
+        <h1>Sobre</h1>
+      </section>
+
+      <section id="servicos">
+        <h1>Serviços</h1>
+      </section>
+
+      <section id="projetos">
+        <h1>Projetos</h1>
+      </section>
+
+      <section id="contato">
+        <h1>Contato</h1>
+      </section>
+
+    </main>
+
+    <footer>
+      <!-- Footer -->
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
