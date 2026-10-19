@@ -43,3 +43,6 @@ Thumbs.db
 # Configurações locais do editor
 .vscode/*
 !.vscode/extensions.json
+
+# Videos are hosted on YouTube
+public/images/unity-vr/**/*.mp4
