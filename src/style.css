@@ -24,3 +24,304 @@
     font-size: 16px;
   }
 }
+
+/* Portfolio: editorial rows keep the main page calm while opening richer detail on demand. */
+#portfolio-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+.portfolio-project {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.8fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  animation: project-arrive 500ms both;
+  animation-delay: calc(var(--project-index, 0) * 45ms);
+}
+
+.portfolio-project:nth-child(even) .portfolio-project__image-button {
+  order: 2;
+}
+
+.portfolio-project__image-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 1rem;
+  background: #f2f0ec;
+  cursor: pointer;
+  text-align: left;
+}
+
+.portfolio-project__image-button img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 350ms ease;
+}
+
+.portfolio-project__image-button:hover img,
+.portfolio-project__image-button:focus-visible img {
+  transform: scale(1.025);
+}
+
+.portfolio-project__image-button:focus-visible,
+.portfolio-project__action:focus-visible,
+.project-dialog button:focus-visible,
+.project-dialog a:focus-visible {
+  outline: 3px solid #a95f39;
+  outline-offset: 4px;
+}
+
+.portfolio-project > div {
+  padding: 0;
+}
+
+.portfolio-project > div > p:first-child,
+.project-dialog__category {
+  color: #80624e;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.portfolio-project h3 {
+  margin-block: 0.65rem 0.9rem;
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
+  line-height: 1.08;
+}
+
+.portfolio-project .leading-relaxed {
+  max-width: 38rem;
+  line-height: 1.7;
+}
+
+.portfolio-project [data-project-links] {
+  display: none;
+}
+
+.portfolio-project__action,
+.project-dialog__video-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  margin-top: 1.25rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.portfolio-project__action:hover,
+.project-dialog__video-toggle:hover:not(:disabled) {
+  background: #171717;
+  color: #fff;
+}
+
+.project-dialog {
+  width: min(74rem, calc(100vw - 2rem));
+  max-width: none;
+  max-height: min(90dvh, 58rem);
+  padding: 0;
+  overflow: auto;
+  border: 0;
+  border-radius: 1.25rem;
+  background: #fff;
+  color: #171717;
+  box-shadow: 0 2rem 7rem rgb(0 0 0 / 35%);
+}
+
+.project-dialog::backdrop {
+  background: rgb(12 12 12 / 72%);
+  backdrop-filter: blur(4px);
+}
+
+.project-dialog__panel {
+  position: relative;
+  min-height: 30rem;
+}
+
+.project-dialog__close {
+  position: sticky;
+  z-index: 2;
+  top: 1rem;
+  float: right;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: 1rem 1rem -3.75rem 0;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #171717;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 16%);
+  font: inherit;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.project-dialog__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(19rem, 0.75fr);
+}
+
+.project-dialog__media {
+  align-self: start;
+  padding: clamp(1rem, 3vw, 2rem);
+  background: #f4f2ef;
+}
+
+.project-dialog__image,
+.project-dialog__video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  border-radius: 0.8rem;
+  background: #e9e6e1;
+  object-fit: contain;
+}
+
+.project-dialog__video {
+  aspect-ratio: 16 / 9;
+}
+
+.project-dialog__thumbnails {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+  overflow-x: auto;
+}
+
+.project-dialog__thumbnail {
+  flex: 0 0 5.25rem;
+  padding: 0.2rem;
+  border: 1px solid transparent;
+  border-radius: 0.55rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.project-dialog__thumbnail[aria-pressed="true"] {
+  border-color: #80624e;
+}
+
+.project-dialog__thumbnail img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 0.35rem;
+  object-fit: cover;
+}
+
+.project-dialog__details {
+  align-self: center;
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.project-dialog__title {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.05;
+}
+
+.project-dialog__description {
+  line-height: 1.75;
+}
+
+.project-dialog__facts {
+  display: grid;
+  gap: 1rem;
+  margin: 1.75rem 0;
+  padding-block: 1.25rem;
+  border-block: 1px solid #e5e1dc;
+}
+
+.project-dialog__facts dt {
+  color: #6b625b;
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
+.project-dialog__facts dd {
+  margin: 0.2rem 0 0;
+}
+
+.project-dialog__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.project-dialog__link {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  background: #171717;
+  color: #fff;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.project-dialog__link:hover {
+  background: #80624e;
+}
+
+@keyframes project-arrive {
+  from { opacity: 0; transform: translateY(0.75rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 760px) {
+  .portfolio-project {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .portfolio-project:nth-child(even) .portfolio-project__image-button {
+    order: initial;
+  }
+
+  .project-dialog {
+    width: min(38rem, calc(100vw - 1rem));
+    max-height: 94dvh;
+    border-radius: 1rem;
+  }
+
+  .project-dialog__content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-dialog__media {
+    padding: 0.75rem;
+  }
+
+  .project-dialog__details {
+    padding: 1.25rem 1.25rem 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-project { animation: none; }
+  .portfolio-project__image-button img { transition: none; }
+}
