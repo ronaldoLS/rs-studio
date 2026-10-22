@@ -56,22 +56,22 @@ const projects = {
   savana: {
     title: 'Savana', category: 'Design gráfico · Identidade visual',
     description: 'Criação de logótipo para a Savana, com uma proposta visual desenvolvida para representar a identidade do projeto.',
-    media: [{ type: 'image', src: '/images/design/logo_savana.jpg', alt: 'Logótipo Savana' }], links: [],
+    media: [{ type: 'image', src: '/images/design/logo_savana.jpg', alt: 'Logótipo Savana', fit: 'contain' }], links: [],
   },
   'tio-marlos': {
     title: 'Barbearia Tio Marlos', category: 'Design gráfico · Identidade visual',
     description: 'Desenvolvimento de logótipo para a Barbearia Tio Marlos, com uma identidade gráfica alinhada com o nome e o conceito da marca.',
-    media: [{ type: 'image', src: '/images/design/logo_barbearia_tio_marlos.jpg', alt: 'Logótipo Barbearia Tio Marlos' }], links: [],
+    media: [{ type: 'image', src: '/images/design/logo_barbearia_tio_marlos.jpg', alt: 'Logótipo Barbearia Tio Marlos', fit: 'contain' }], links: [],
   },
   sallasinfor: {
     title: 'Sallasinfor', category: 'Design gráfico · Identidade visual',
     description: 'Criação de logótipo para a Sallasinfor, com foco numa identidade visual própria para a marca.',
-    media: [{ type: 'image', src: '/images/design/logo_sallasinfor.jpg', alt: 'Logótipo Sallasinfor' }], links: [],
+    media: [{ type: 'image', src: '/images/design/logo_sallasinfor.jpg', alt: 'Logótipo Sallasinfor', fit: 'contain' }], links: [],
   },
   'quarteto-art': {
     title: 'Quarteto Art', category: 'Design gráfico · Identidade visual',
     description: 'Desenvolvimento de logótipo para o Quarteto Art, criando uma identidade visual associada ao projeto musical.',
-    media: [{ type: 'image', src: '/images/design/logo_quarteto_art.jpg', alt: 'Logótipo Quarteto Art' }], links: [],
+    media: [{ type: 'image', src: '/images/design/logo_quarteto_art.jpg', alt: 'Logótipo Quarteto Art', fit: 'contain' }], links: [],
   },
 }
 
@@ -89,7 +89,7 @@ function selectMedia(project, index) {
     const frame = document.createElement('iframe')
     frame.src = `https://www.youtube-nocookie.com/embed/${media.id}?autoplay=1&rel=0`
     frame.title = media.label
-    frame.className = 'aspect-video w-full self-stretch'
+    frame.className = 'absolute inset-0 h-full w-full scale-[1.02] border-0'
     frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
     frame.referrerPolicy = 'strict-origin-when-cross-origin'
     frame.allowFullscreen = true
@@ -98,7 +98,7 @@ function selectMedia(project, index) {
     const image = document.createElement('img')
     image.src = media.src
     image.alt = media.alt
-    image.className = 'max-h-[65dvh] w-full object-contain'
+    image.className = 'h-full w-full ' + (media.fit === 'contain' ? 'bg-neutral-100 object-contain' : 'object-cover')
     mediaStage.append(image)
   }
 
@@ -131,7 +131,7 @@ function openProject(id, trigger) {
   project.media.forEach((media, index) => {
     const button = document.createElement('button')
     button.type = 'button'
-    button.className = 'relative h-20 w-28 shrink-0 overflow-hidden rounded-lg border-2 border-transparent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black aria-pressed:border-black'
+    button.className = 'relative h-20 w-28 shrink-0 cursor-pointer overflow-hidden rounded-lg border-2 border-transparent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black aria-pressed:border-black'
     button.setAttribute('aria-label', media.type === 'video' ? `Selecionar vídeo: ${media.label}` : `Selecionar imagem ${index + 1}: ${media.alt}`)
     button.setAttribute('aria-pressed', 'false')
     button.addEventListener('click', () => selectMedia(project, index))
@@ -167,4 +167,18 @@ dialog.addEventListener('click', (event) => {
 dialog.addEventListener('close', () => {
   mediaStage.replaceChildren()
   opener?.focus()
+})
+const categoryFilters = document.querySelectorAll('[data-category-filter]')
+const projectCards = document.querySelectorAll('#portfolio-grid [data-category]')
+
+categoryFilters.forEach((filter) => {
+  filter.addEventListener('click', () => {
+    const category = filter.dataset.categoryFilter
+    categoryFilters.forEach((button) => {
+      button.setAttribute('aria-pressed', String(button === filter))
+    })
+    projectCards.forEach((card) => {
+      card.hidden = category !== 'all' && card.dataset.category !== category
+    })
+  })
 })

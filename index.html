@@ -302,10 +302,15 @@
             </p>
           </div>
 
-          <div id="portfolio-grid" class="grid grid-cols-1 divide-y divide-neutral-200 md:grid-cols-2 md:divide-y-0 md:gap-x-12 md:gap-y-24 xl:grid-cols-3">
+          <div class="mb-8 flex flex-wrap gap-2" role="group" aria-label="Filtrar projetos por categoria">
+            <button type="button" data-category-filter="all" aria-pressed="true" class="cursor-pointer rounded-full border border-neutral-950 bg-neutral-950 px-4 py-2 text-sm font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">Todos</button>
+            <button type="button" data-category-filter="web" aria-pressed="false" class="cursor-pointer rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:border-neutral-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black aria-pressed:bg-neutral-950 aria-pressed:text-white">Web</button>
+            <button type="button" data-category-filter="unity-vr" aria-pressed="false" class="cursor-pointer rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:border-neutral-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black aria-pressed:bg-neutral-950 aria-pressed:text-white">Unity · VR</button>
+            <button type="button" data-category-filter="design" aria-pressed="false" class="cursor-pointer rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:border-neutral-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black aria-pressed:bg-neutral-950 aria-pressed:text-white">Design</button>
+          </div>          <div id="portfolio-grid" class="grid grid-cols-1 divide-y divide-neutral-200 md:grid-cols-2 md:divide-y-0 md:gap-x-12 md:gap-y-24 xl:grid-cols-3">
 
             <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="web">
-              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="calculadora"
+              <button class="portfolio-trigger relative block w-full cursor-pointer overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="calculadora"
                 aria-label="Explorar Calculadora para compras">
                 <img src="/images/web/calculadoraMercado.jpg" alt="Interface da Calculadora para compras"
                   loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
@@ -319,7 +324,7 @@
             </article>
 
             <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="web">
-              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="simon" aria-label="Explorar Jogo Simon">
+              <button class="portfolio-trigger relative block w-full cursor-pointer overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="simon" aria-label="Explorar Jogo Simon">
                 <img src="/images/web/jogoSimon.jpg" alt="Interface do jogo Simon" loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
               </button>
@@ -331,7 +336,7 @@
             </article>
 
             <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="unity-vr">
-              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="archery" aria-label="Explorar Archery Valley VR">
+              <button class="portfolio-trigger relative block w-full cursor-pointer overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="archery" aria-label="Explorar Archery Valley VR">
                 <img src="/images/unity-vr/archery_valley_vr/img1_archery_valley_VR.jpg"
                   alt="Archery Valley VR em funcionamento" loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
@@ -344,7 +349,7 @@
             </article>
 
             <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="unity-vr">
-              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="fuel-rush" aria-label="Explorar Fuel Rush">
+              <button class="portfolio-trigger relative block w-full cursor-pointer overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="fuel-rush" aria-label="Explorar Fuel Rush">
                 <img src="/images/unity-vr/Fuel_Rush/img1_fuel_rush.jpg" alt="Imagem de gameplay de Fuel Rush"
                   loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
@@ -357,7 +362,7 @@
             </article>
 
             <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="unity-vr">
-              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="guess-order" aria-label="Explorar Guess the Order">
+              <button class="portfolio-trigger relative block w-full cursor-pointer overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="guess-order" aria-label="Explorar Guess the Order">
                 <img src="/images/unity-vr/guess_the_order/img1_guess_the_order.jpg"
                   alt="Imagem de gameplay de Guess the Order" loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
@@ -370,7 +375,7 @@
             </article>
 
             <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="design">
-              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="savana" aria-label="Explorar identidade visual Savana">
+              <button class="portfolio-trigger relative block w-full cursor-pointer overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="savana" aria-label="Explorar identidade visual Savana">
                 <img src="/images/design/logo_savana.jpg" alt="Logótipo Savana" loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
               </button>
@@ -382,7 +387,7 @@
             </article>
 
             <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="design">
-              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="tio-marlos" aria-label="Explorar Barbearia Tio Marlos">
+              <button class="portfolio-trigger relative block w-full cursor-pointer overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="tio-marlos" aria-label="Explorar Barbearia Tio Marlos">
                 <img src="/images/design/logo_barbearia_tio_marlos.jpg" alt="Logótipo Barbearia Tio Marlos"
                   loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
@@ -395,7 +400,7 @@
             </article>
 
             <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="design">
-              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="sallasinfor"
+              <button class="portfolio-trigger relative block w-full cursor-pointer overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="sallasinfor"
                 aria-label="Explorar identidade visual Sallasinfor">
                 <img src="/images/design/logo_sallasinfor.jpg" alt="Logótipo Sallasinfor" loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
@@ -408,7 +413,7 @@
             </article>
 
             <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="design">
-              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="quarteto-art"
+              <button class="portfolio-trigger relative block w-full cursor-pointer overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="quarteto-art"
                 aria-label="Explorar identidade visual Quarteto Art">
                 <img src="/images/design/logo_quarteto_art.jpg" alt="Logótipo Quarteto Art" loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                 <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
@@ -427,10 +432,10 @@
 
       <dialog id="project-modal" aria-labelledby="project-modal-title" aria-describedby="project-modal-description" class="m-auto max-h-[92dvh] w-[min(96vw,64rem)] overflow-y-auto rounded-2xl bg-white p-0 text-neutral-950 shadow-2xl backdrop:bg-black/70">
         <div class="relative p-5 sm:p-8">
-          <button type="button" data-modal-close aria-label="Fechar detalhes do projeto" class="absolute right-4 top-4 z-10 grid size-11 place-items-center rounded-full bg-white text-2xl shadow focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">&times;</button>
+          <button type="button" data-modal-close aria-label="Fechar detalhes do projeto" class="absolute right-4 top-4 z-10 grid size-11 cursor-pointer place-items-center rounded-full border border-neutral-200 bg-white/95 text-neutral-800 shadow-sm transition hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" title="Fechar"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="1.8"><path d="m6 6 12 12M18 6 6 18" stroke-linecap="round"/></svg></button>
           <div class="grid gap-7 md:grid-cols-[minmax(0,1.4fr)_minmax(15rem,0.8fr)]">
             <div class="min-w-0">
-              <div id="project-modal-media" class="flex min-h-56 items-center justify-center overflow-hidden rounded-xl bg-neutral-100 sm:min-h-80" aria-live="polite"></div>
+              <div id="project-modal-media" class="relative aspect-video w-full overflow-hidden rounded-xl bg-neutral-950" aria-live="polite"></div>
               <div id="project-modal-thumbnails" class="mt-3 flex gap-3 overflow-x-auto pb-2" aria-label="Multimédia do projeto"></div>
             </div>
             <div class="pt-12 md:pt-8">
