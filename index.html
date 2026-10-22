@@ -284,195 +284,139 @@
 
 
 
-      <section id="projetos" class="py-20">
+      <section id="projetos" class="py-20 portfolio-section">
         <div class="max-w-6xl mx-auto px-6">
 
-          <div class="mb-12">
+          <div class="mb-16">
             <p class="text-sm font-semibold tracking-widest uppercase mb-4">
-              Projetos
+              Projetos selecionados
             </p>
 
             <h2 class="text-4xl md:text-5xl font-bold max-w-3xl">
-              Alguns dos nossos trabalhos.
+              Ideias transformadas em experiências.
             </h2>
 
             <p class="text-lg leading-relaxed max-w-3xl mt-6">
-              Conheça uma seleção de projetos que combina desenvolvimento,
-              design e experiências interativas.
+              Uma seleção de trabalhos em desenvolvimento web,
+              jogos, realidade virtual e identidade visual.
             </p>
           </div>
 
-          <!-- Grelha de projetos -->
-          <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div id="portfolio-grid" class="grid grid-cols-1 divide-y divide-neutral-200 md:grid-cols-2 md:divide-y-0 md:gap-x-12 md:gap-y-24 xl:grid-cols-3">
 
-            <article class="overflow-hidden rounded-xl border" data-project-card data-category="web">
-              <figure>
-                <img src="/images/web/calculadoraMercado.jpg" alt="Calculadora para compras"
-                  class="w-full aspect-[4/3] object-cover" loading="lazy" />
-              </figure>
-              <div class="p-6">
-                <p class="text-sm font-semibold mb-3">Desenvolvimento Web</p>
-                <h3 class="text-xl font-bold mb-3">Calculadora para compras</h3>
-                <p class="leading-relaxed">
-                  Aplicação web para registar produtos e preços durante as compras,
-                  acompanhar o valor acumulado e ajudar a controlar o orçamento.
-                </p>
-                <div class="mt-6 flex flex-wrap gap-3" data-project-links>
-                  <a href="https://ronaldols.github.io/calculadora_de_mercado/" target="_blank"
-                    rel="noopener noreferrer" class="underline">Ver projeto</a>
-                  <a href="https://github.com/ronaldoLS/calculadora_de_mercado" target="_blank"
-                    rel="noopener noreferrer" class="underline">Ver código</a>
-                </div>
+            <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="web">
+              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="calculadora"
+                aria-label="Explorar Calculadora para compras">
+                <img src="/images/web/calculadoraMercado.jpg" alt="Interface da Calculadora para compras"
+                  loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="portfolio-info pt-5">
+                <p class="portfolio-category text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">Desenvolvimento web</p>
+                <h3 class="mt-2 text-2xl font-semibold tracking-tight">Calculadora para compras</h3>
+                <p class="mt-3 max-w-prose text-base leading-relaxed text-neutral-600">Aplicação web para registar produtos e preços durante as compras, acompanhar o valor acumulado e ajudar a controlar o orçamento.</p>
               </div>
             </article>
 
-            <article class="overflow-hidden rounded-xl border" data-project-card data-category="web">
-              <figure>
-                <img src="/images/web/jogoSimon.jpg" alt="Jogo Simon" class="w-full aspect-[4/3] object-cover"
-                  loading="lazy" />
-              </figure>
-              <div class="p-6">
-                <p class="text-sm font-semibold mb-3">Desenvolvimento Web</p>
-                <h3 class="text-xl font-bold mb-3">Jogo Simon</h3>
-                <p class="leading-relaxed">
-                  Jogo de memória que desafia o jogador a observar e repetir
-                  sequências de cores, testando a atenção e a capacidade de memorização.
-                </p> cores e sons.</p>
-                <div class="mt-6 flex flex-wrap gap-3" data-project-links>
-                  <a href="https://ronaldols.github.io/jogo_simon/" target="_blank" rel="noopener noreferrer"
-                    class="underline">Jogar</a>
-                  <a href="https://github.com/ronaldoLS/jogo_simon" target="_blank" rel="noopener noreferrer"
-                    class="underline">Ver código</a>
-                </div>
+            <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="web">
+              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="simon" aria-label="Explorar Jogo Simon">
+                <img src="/images/web/jogoSimon.jpg" alt="Interface do jogo Simon" loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="portfolio-info pt-5">
+                <p class="portfolio-category text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">Desenvolvimento web</p>
+                <h3 class="mt-2 text-2xl font-semibold tracking-tight">Jogo Simon</h3>
+                <p class="mt-3 max-w-prose text-base leading-relaxed text-neutral-600">Jogo de memória que desafia o jogador a observar e repetir sequências de cores, testando a atenção e a capacidade de memorização.</p>
               </div>
             </article>
 
-            <article class="overflow-hidden rounded-xl border" data-project-card data-category="unity-vr">
-              <figure>
+            <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="unity-vr">
+              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="archery" aria-label="Explorar Archery Valley VR">
                 <img src="/images/unity-vr/archery_valley_vr/img1_archery_valley_VR.jpg"
-                  alt="Archery Valley VR em Meta Quest 3" class="w-full aspect-[4/3] object-cover" loading="lazy" />
-              </figure>
-              <div class="p-6">
-                <p class="text-sm font-semibold mb-3">Unity · Realidade Virtual</p>
-                <h3 class="text-xl font-bold mb-3">Archery Valley VR</h3>
-                <p class="leading-relaxed">
-                  Projeto de tiro com arco em realidade virtual para Meta Quest 3,
-                  com mecânicas de disparo de flechas, pontuação e interação com alvos.
-                  Ainda não publicado.
-                </p> publicada.</p>
-                <div class="mt-6 flex flex-wrap gap-3" data-project-links>
-                  <a href="/images/unity-vr/archery_valley_vr/img4_archery_valley_VR.jpg" target="_blank"
-                    rel="noopener noreferrer" class="underline">Ver imagem</a>
-                  <a href="https://youtu.be/2lb_ajwBe4w" target="_blank" rel="noopener noreferrer" class="underline">Ver
-                    vídeo</a>
-                </div>
+                  alt="Archery Valley VR em funcionamento" loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="portfolio-info pt-5">
+                <p class="portfolio-category text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">Unity · Realidade virtual</p>
+                <h3 class="mt-2 text-2xl font-semibold tracking-tight">Archery Valley VR</h3>
+                <p class="mt-3 max-w-prose text-base leading-relaxed text-neutral-600">Projeto de tiro com arco em realidade virtual para Meta Quest 3, com mecânicas de disparo de flechas, pontuação e interação com alvos. Ainda não publicado.</p>
               </div>
             </article>
 
-            <article class="overflow-hidden rounded-xl border" data-project-card data-category="unity-vr">
-              <figure>
-                <img src="/images/unity-vr/Fuel_Rush/img1_fuel_rush.jpg" alt="Fuel Rush"
-                  class="w-full aspect-[4/3] object-cover" loading="lazy" />
-              </figure>
-              <div class="p-6">
-                <p class="text-sm font-semibold mb-3">Unity · Jogo</p>
-                <h3 class="text-xl font-bold mb-3">Fuel Rush</h3>
-                <p class="leading-relaxed">
-                  Jogo de condução com uma estrada infinita, no qual o jogador
-                  percorre a maior distância possível enquanto acompanha o combustível
-                  disponível.
-                </p>
-                <div class="mt-6 flex flex-wrap gap-3" data-project-links>
-                  <a href="https://play.unity.com/en/games/e6a2cc75-a9f7-4a47-91e0-637948b8457e/fuel-rush-endless-drive"
-                    target="_blank" rel="noopener noreferrer" class="underline">Jogar no Unity Play</a>
-                  <a href="https://youtu.be/ixDtFMfvOJI" target="_blank" rel="noopener noreferrer" class="underline">Ver
-                    vídeo</a>
-                </div>
+            <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="unity-vr">
+              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="fuel-rush" aria-label="Explorar Fuel Rush">
+                <img src="/images/unity-vr/Fuel_Rush/img1_fuel_rush.jpg" alt="Imagem de gameplay de Fuel Rush"
+                  loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="portfolio-info pt-5">
+                <p class="portfolio-category text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">Unity · Jogo</p>
+                <h3 class="mt-2 text-2xl font-semibold tracking-tight">Fuel Rush</h3>
+                <p class="mt-3 max-w-prose text-base leading-relaxed text-neutral-600">Jogo de condução numa estrada infinita, no qual o jogador percorre a maior distância possível enquanto acompanha o combustível disponível.</p>
               </div>
             </article>
 
-            <article class="overflow-hidden rounded-xl border" data-project-card data-category="unity-vr">
-              <figure>
-                <img src="/images/unity-vr/guess_the_order/img1_guess_the_order.jpg" alt="Guess the Order"
-                  class="w-full aspect-[4/3] object-cover" loading="lazy" />
-              </figure>
-              <div class="p-6">
-                <p class="text-sm font-semibold mb-3">Unity · Jogo</p>
-                <h3 class="text-xl font-bold mb-3">Guess the Order</h3>
-                <p class="leading-relaxed">
-                  Jogo de lógica em que o jogador precisa descobrir a ordem correta
-                  dos elementos, recorrendo à observação e ao raciocínio.
-                </p>
-                <div class="mt-6 flex flex-wrap gap-3" data-project-links>
-                  <a href="https://play.unity.com/en/games/742d21e0-d0a6-445a-b91e-4c492e81f47f/guess-the-order"
-                    target="_blank" rel="noopener noreferrer" class="underline">Jogar no Unity Play</a>
-                  <a href="https://youtu.be/zJWEgvL1z9c" target="_blank" rel="noopener noreferrer" class="underline">Ver
-                    vídeo</a>
-                </div>
+            <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="unity-vr">
+              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="guess-order" aria-label="Explorar Guess the Order">
+                <img src="/images/unity-vr/guess_the_order/img1_guess_the_order.jpg"
+                  alt="Imagem de gameplay de Guess the Order" loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="portfolio-info pt-5">
+                <p class="portfolio-category text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">Unity · Jogo</p>
+                <h3 class="mt-2 text-2xl font-semibold tracking-tight">Guess the Order</h3>
+                <p class="mt-3 max-w-prose text-base leading-relaxed text-neutral-600">Jogo de lógica em que o jogador precisa descobrir a ordem correta dos elementos, recorrendo à observação e ao raciocínio.</p>
               </div>
             </article>
 
-            <article class="overflow-hidden rounded-xl border" data-project-card data-category="design">
-              <figure>
-                <img src="/images/design/logo_savana.jpg" alt="Logótipo Savana" class="w-full aspect-[4/3] object-cover"
-                  loading="lazy" />
-              </figure>
-              <div class="p-6">
-                <p class="text-sm font-semibold mb-3">Design Gráfico · Identidade Visual</p>
-                <h3 class="text-xl font-bold mb-3">Savana</h3>
-                <p class="leading-relaxed">
-                  Criação de logótipo para a Savana, com uma proposta visual
-                  desenvolvida para representar a identidade do projeto.
-                </p>
-                <div class="mt-6 flex flex-wrap gap-3" data-project-links></div>
+            <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="design">
+              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="savana" aria-label="Explorar identidade visual Savana">
+                <img src="/images/design/logo_savana.jpg" alt="Logótipo Savana" loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="portfolio-info pt-5">
+                <p class="portfolio-category text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">Design gráfico · Identidade visual</p>
+                <h3 class="mt-2 text-2xl font-semibold tracking-tight">Savana</h3>
+                <p class="mt-3 max-w-prose text-base leading-relaxed text-neutral-600">Criação de logótipo para a Savana, com uma proposta visual desenvolvida para representar a identidade do projeto.</p>
               </div>
             </article>
 
-            <article class="overflow-hidden rounded-xl border" data-project-card data-category="design">
-              <figure>
+            <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="design">
+              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="tio-marlos" aria-label="Explorar Barbearia Tio Marlos">
                 <img src="/images/design/logo_barbearia_tio_marlos.jpg" alt="Logótipo Barbearia Tio Marlos"
-                  class="w-full aspect-[4/3] object-cover" loading="lazy" />
-              </figure>
-              <div class="p-6">
-                <p class="text-sm font-semibold mb-3">Design Gráfico · Identidade Visual</p>
-                <h3 class="text-xl font-bold mb-3">Barbearia Tio Marlos</h3>
-                <p class="leading-relaxed">
-                  Desenvolvimento de logótipo para a Barbearia Tio Marlos,
-                  com uma identidade gráfica alinhada com o nome e o conceito da marca.
-                </p>
-                <div class="mt-6 flex flex-wrap gap-3" data-project-links></div>
+                  loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="portfolio-info pt-5">
+                <p class="portfolio-category text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">Design gráfico · Identidade visual</p>
+                <h3 class="mt-2 text-2xl font-semibold tracking-tight">Barbearia Tio Marlos</h3>
+                <p class="mt-3 max-w-prose text-base leading-relaxed text-neutral-600">Desenvolvimento de logótipo para a Barbearia Tio Marlos, com uma identidade gráfica alinhada com o nome e o conceito da marca.</p>
               </div>
             </article>
 
-            <article class="overflow-hidden rounded-xl border" data-project-card data-category="design">
-              <figure>
-                <img src="/images/design/logo_sallasinfor.jpg" alt="Logótipo Sallasinfor"
-                  class="w-full aspect-[4/3] object-cover" loading="lazy" />
-              </figure>
-              <div class="p-6">
-                <p class="text-sm font-semibold mb-3">Design Gráfico · Identidade Visual</p>
-                <h3 class="text-xl font-bold mb-3">Sallasinfor</h3>
-                <p class="leading-relaxed">
-                  Criação de logótipo para a Sallasinfor, com foco numa identidade
-                  visual própria para a marca.
-                </p>
-                <div class="mt-6 flex flex-wrap gap-3" data-project-links></div>
+            <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="design">
+              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="sallasinfor"
+                aria-label="Explorar identidade visual Sallasinfor">
+                <img src="/images/design/logo_sallasinfor.jpg" alt="Logótipo Sallasinfor" loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="portfolio-info pt-5">
+                <p class="portfolio-category text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">Design gráfico · Identidade visual</p>
+                <h3 class="mt-2 text-2xl font-semibold tracking-tight">Sallasinfor</h3>
+                <p class="mt-3 max-w-prose text-base leading-relaxed text-neutral-600">Criação de logótipo para a Sallasinfor, com foco numa identidade visual própria para a marca.</p>
               </div>
             </article>
 
-            <article class="overflow-hidden rounded-xl border" data-project-card data-category="design">
-              <figure>
-                <img src="/images/design/logo_quarteto_art.jpg" alt="Logótipo Quarteto Art"
-                  class="w-full aspect-[4/3] object-cover" loading="lazy" />
-              </figure>
-              <div class="p-6">
-                <p class="text-sm font-semibold mb-3">Design Gráfico · Identidade Visual</p>
-                <h3 class="text-xl font-bold mb-3">Quarteto Art</h3>
-                <p class="leading-relaxed">
-                  Desenvolvimento de logótipo para o Quarteto Art, criando
-                  uma identidade visual associada ao projeto musical.
-                </p>
-                <div class="mt-6 flex flex-wrap gap-3" data-project-links></div>
+            <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="design">
+              <button class="portfolio-trigger relative block w-full overflow-hidden rounded-2xl bg-neutral-100 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black" data-project-id="quarteto-art"
+                aria-label="Explorar identidade visual Quarteto Art">
+                <img src="/images/design/logo_quarteto_art.jpg" alt="Logótipo Quarteto Art" loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                <span class="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/70 to-transparent px-5 pb-5 pt-12 text-sm font-medium text-white">Explorar projeto <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="portfolio-info pt-5">
+                <p class="portfolio-category text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">Design gráfico · Identidade visual</p>
+                <h3 class="mt-2 text-2xl font-semibold tracking-tight">Quarteto Art</h3>
+                <p class="mt-3 max-w-prose text-base leading-relaxed text-neutral-600">Desenvolvimento de logótipo para o Quarteto Art, criando uma identidade visual associada ao projeto musical.</p>
               </div>
             </article>
 
@@ -481,6 +425,23 @@
       </section>
 
 
+      <dialog id="project-modal" aria-labelledby="project-modal-title" aria-describedby="project-modal-description" class="m-auto max-h-[92dvh] w-[min(96vw,64rem)] overflow-y-auto rounded-2xl bg-white p-0 text-neutral-950 shadow-2xl backdrop:bg-black/70">
+        <div class="relative p-5 sm:p-8">
+          <button type="button" data-modal-close aria-label="Fechar detalhes do projeto" class="absolute right-4 top-4 z-10 grid size-11 place-items-center rounded-full bg-white text-2xl shadow focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">&times;</button>
+          <div class="grid gap-7 md:grid-cols-[minmax(0,1.4fr)_minmax(15rem,0.8fr)]">
+            <div class="min-w-0">
+              <div id="project-modal-media" class="flex min-h-56 items-center justify-center overflow-hidden rounded-xl bg-neutral-100 sm:min-h-80" aria-live="polite"></div>
+              <div id="project-modal-thumbnails" class="mt-3 flex gap-3 overflow-x-auto pb-2" aria-label="Multimédia do projeto"></div>
+            </div>
+            <div class="pt-12 md:pt-8">
+              <p id="project-modal-category" class="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500"></p>
+              <h2 id="project-modal-title" class="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl"></h2>
+              <p id="project-modal-description" class="mt-5 leading-relaxed text-neutral-600"></p>
+              <div id="project-modal-links" class="mt-7 flex flex-col items-start gap-3"></div>
+            </div>
+          </div>
+        </div>
+      </dialog>
       <section id="contato" class="py-20">
         <div class="max-w-6xl mx-auto px-6">
           <p class="text-sm font-semibold tracking-widest uppercase mb-4">
