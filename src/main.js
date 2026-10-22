@@ -80,6 +80,7 @@ const mediaStage = document.querySelector('#project-modal-media')
 const thumbnails = document.querySelector('#project-modal-thumbnails')
 const closeButton = dialog.querySelector('[data-modal-close]')
 let opener = null
+let previousScrollStyles = null
 
 function selectMedia(project, index) {
   const media = project.media[index]
@@ -153,6 +154,12 @@ function openProject(id, trigger) {
   })
 
   selectMedia(project, 0)
+  previousScrollStyles = {
+    body: document.body.style.overflow,
+    document: document.documentElement.style.overflow,
+  }
+  document.body.style.overflow = 'hidden'
+  document.documentElement.style.overflow = 'hidden'
   dialog.showModal()
 }
 
@@ -166,6 +173,11 @@ dialog.addEventListener('click', (event) => {
 })
 dialog.addEventListener('close', () => {
   mediaStage.replaceChildren()
+  if (previousScrollStyles) {
+    document.body.style.overflow = previousScrollStyles.body
+    document.documentElement.style.overflow = previousScrollStyles.document
+    previousScrollStyles = null
+  }
   opener?.focus()
 })
 const categoryFilters = document.querySelectorAll('[data-category-filter]')
