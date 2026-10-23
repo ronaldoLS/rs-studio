@@ -87,6 +87,7 @@ function selectMedia(project, index) {
   mediaStage.replaceChildren()
 
   if (media.type === 'video') {
+    mediaStage.classList.add('aspect-video', 'bg-neutral-950')
     const frame = document.createElement('iframe')
     frame.src = `https://www.youtube-nocookie.com/embed/${media.id}?autoplay=1&rel=0`
     frame.title = media.label
@@ -96,10 +97,11 @@ function selectMedia(project, index) {
     frame.allowFullscreen = true
     mediaStage.append(frame)
   } else {
+    mediaStage.classList.remove('aspect-video', 'bg-neutral-950')
     const image = document.createElement('img')
     image.src = media.src
     image.alt = media.alt
-    image.className = 'h-full w-full ' + (media.fit === 'contain' ? 'bg-neutral-100 object-contain' : 'object-cover')
+    image.className = 'block max-h-[70dvh] max-w-full object-contain' + (media.fit === 'contain' ? ' bg-neutral-100' : '')
     mediaStage.append(image)
   }
 
@@ -129,6 +131,7 @@ function openProject(id, trigger) {
   }
 
   thumbnails.replaceChildren()
+  thumbnails.hidden = project.media.length <= 1
   project.media.forEach((media, index) => {
     const button = document.createElement('button')
     button.type = 'button'

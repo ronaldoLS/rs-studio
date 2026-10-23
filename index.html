@@ -302,11 +302,11 @@
             </p>
           </div>
 
-          <div class="mb-8 flex flex-wrap gap-2" role="group" aria-label="Filtrar projetos por categoria">
-            <button type="button" data-category-filter="all" aria-pressed="true" class="cursor-pointer rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:border-neutral-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black aria-pressed:bg-neutral-950 aria-pressed:text-white">Todos</button>
-            <button type="button" data-category-filter="web" aria-pressed="false" class="cursor-pointer rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:border-neutral-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black aria-pressed:bg-neutral-950 aria-pressed:text-white">Web</button>
-            <button type="button" data-category-filter="unity-vr" aria-pressed="false" class="cursor-pointer rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:border-neutral-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black aria-pressed:bg-neutral-950 aria-pressed:text-white">Unity · VR</button>
-            <button type="button" data-category-filter="design" aria-pressed="false" class="cursor-pointer rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:border-neutral-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black aria-pressed:bg-neutral-950 aria-pressed:text-white">Design</button>
+          <div class="mb-8 flex w-full flex-nowrap gap-2 overflow-x-auto pb-2 md:flex-wrap md:overflow-visible md:pb-0" role="group" aria-label="Filtrar projetos por categoria">
+            <button type="button" data-category-filter="all" aria-pressed="true" class="cursor-pointer shrink-0 whitespace-nowrap rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:border-neutral-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black aria-pressed:bg-neutral-950 aria-pressed:text-white">Todos</button>
+            <button type="button" data-category-filter="web" aria-pressed="false" class="cursor-pointer shrink-0 whitespace-nowrap rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:border-neutral-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black aria-pressed:bg-neutral-950 aria-pressed:text-white">Web</button>
+            <button type="button" data-category-filter="unity-vr" aria-pressed="false" class="cursor-pointer shrink-0 whitespace-nowrap rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:border-neutral-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black aria-pressed:bg-neutral-950 aria-pressed:text-white">Unity · VR</button>
+            <button type="button" data-category-filter="design" aria-pressed="false" class="cursor-pointer shrink-0 whitespace-nowrap rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:border-neutral-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black aria-pressed:bg-neutral-950 aria-pressed:text-white">Design</button>
           </div>          <div id="portfolio-grid" class="grid grid-cols-1 divide-y divide-neutral-200 md:grid-cols-2 md:divide-y-0 md:gap-x-12 md:gap-y-24 xl:grid-cols-3">
 
             <article class="group min-w-0 py-8 first:pt-0 last:pb-0 md:py-0 md:odd:mt-16 xl:mt-0" data-category="web">
@@ -435,7 +435,7 @@
           <button type="button" data-modal-close aria-label="Fechar detalhes do projeto" class="absolute right-4 top-4 z-10 grid size-11 cursor-pointer place-items-center rounded-full border border-neutral-200 bg-white/95 text-neutral-800 shadow-sm transition hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" title="Fechar"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" class="size-5" stroke="currentColor" stroke-width="1.8"><path d="m6 6 12 12M18 6 6 18" stroke-linecap="round"/></svg></button>
           <div class="grid gap-7 md:grid-cols-[minmax(0,1.4fr)_minmax(15rem,0.8fr)]">
             <div class="min-w-0">
-              <div id="project-modal-media" class="relative aspect-video w-full overflow-hidden rounded-xl bg-neutral-950" aria-live="polite"></div>
+              <div id="project-modal-media" class="relative flex w-full items-center justify-center overflow-hidden rounded-xl" aria-live="polite"></div>
               <div id="project-modal-thumbnails" class="mt-3 flex gap-3 overflow-x-auto pb-2" aria-label="Multimédia do projeto"></div>
             </div>
             <div class="pt-12 md:pt-8">
