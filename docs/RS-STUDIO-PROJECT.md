@@ -1191,3 +1191,91 @@ Este arquivo deve ser mantido atualizado sempre que houver:
 - alteração relevante na Definition of Done ou nas convenções do projeto.
 
 O arquivo deve preservar o histórico relevante do projeto e continuar sendo a **fonte única de verdade** para contexto e planejamento.
+
+---
+
+# 16. Atualização de Sprint — 23/10/2026
+
+> Esta secção complementa o histórico existente. O conteúdo anterior foi preservado integralmente.
+
+## Sprint 3 — Portfolio: encerramento
+
+**Estado:** Concluída em 23/10/2026.
+
+**Confirmação:** O utilizador informou que os testes passaram e confirmou a conclusão de S3-07 e S3-08. Com isso, a Sprint 3 foi encerrada.
+
+### Resultado registado
+
+- S3-07 — Melhorar navegação do portfólio: concluída; testes reportados como aprovados pelo utilizador.
+- S3-08 — Responsividade do portfólio: concluída; testes reportados como aprovados pelo utilizador.
+- As restantes tarefas do Sprint 3 permanecem conforme o estado registado no acompanhamento operacional da Sprint. Não se acrescentam resultados técnicos não confirmados nesta atualização.
+
+## Sprint 4 — Design & UX: planejamento
+
+### Sprint Goal
+
+> Aplicar a identidade visual da RS Studio e melhorar a experiência do utilizador, preservando as funcionalidades existentes e a responsividade.
+
+### Período proposto
+
+**24/10/2026 a 31/10/2026** — datas propostas, ainda não confirmadas.
+
+### Capacidade estimada
+
+**20 horas**, aproximadamente **3 horas por dia**, com flexibilidade para maior dedicação no fim de semana.
+
+### Sprint Backlog
+
+| ID — tarefa | Estimativa | Dependências |
+|---|---:|---|
+| S4-01 — Definir identidade visual | 2h | Nenhuma |
+| S4-02 — Definir tipografia | 1h | S4-01 |
+| S4-03 — Definir cores | 1h | S4-01 |
+| S4-04 — Definir sistema de espaçamento | 1,5h | S4-02, S4-03 |
+| S4-05 — Refinar componentes | 4h | S4-01 a S4-04 |
+| S4-06 — Melhorar hierarquia visual | 2h | S4-02 a S4-05 |
+| S4-07 — Implementar microinterações | 2h | S4-05 |
+| S4-08 — Implementar animações | 2h | S4-05, S4-07 |
+| S4-09 — Refinar versão mobile | 2h | S4-05, S4-06 |
+| S4-10 — Revisão UX | 2,5h | S4-01 a S4-09 |
+
+### Critérios de aceitação da Sprint
+
+- [ ] A identidade visual da RS Studio está definida e aplicada de forma consistente.
+- [ ] Tipografia, cores e espaçamentos seguem decisões documentadas e coerentes entre secções.
+- [ ] Componentes e hierarquia visual tornam o conteúdo mais claro e fácil de percorrer.
+- [ ] Microinterações e animações dão feedback útil, são discretas e não prejudicam a leitura ou navegação.
+- [ ] A versão mobile foi refinada e não apresenta overflow horizontal ou controlos inacessíveis.
+- [ ] A navegação e as funcionalidades existentes continuam a funcionar.
+- [ ] A revisão UX confirma consistência visual e percursos principais compreensíveis.
+- [ ] A implementação respeita as convenções técnicas do projeto e não introduz placeholders.
+
+### Definition of Done específica da Sprint 4
+
+Além da Definition of Done geral do projeto:
+
+- [ ] Todas as tarefas comprometidas foram concluídas ou formalmente retiradas do Sprint Backlog.
+- [ ] As alterações visuais foram verificadas no navegador em desktop e mobile; tablet foi verificado quando afetado pelo layout.
+- [ ] Os fluxos e funcionalidades tocados pelas alterações foram testados.
+- [ ] Animações e microinterações funcionam com teclado e não bloqueiam conteúdo ou interação; movimento reduzido é respeitado quando aplicável.
+- [ ] Não há regressões conhecidas de responsividade, navegação ou legibilidade.
+- [ ] O build de produção foi executado com sucesso.
+- [ ] Alterações foram revistas e versionadas no Git, quando aplicável, com mensagens de commit em inglês.
+- [ ] O estado das tarefas foi atualizado no Notion.
+- [ ] Sprint Review e Sprint Retrospective foram realizadas.
+- [ ] Este documento foi atualizado, preservando o histórico anterior.
+
+### Convenções técnicas mantidas
+
+- A estrutura HTML permanece em `index.html`.
+- Tailwind CSS continua a ser a ferramenta principal de estilização.
+- `src/style.css` fica reservado para estilos globais e exceções necessárias.
+- `src/main.js` contém comportamento e interações, não a estrutura estática da página.
+- Mensagens de commit são escritas em inglês.
+
+## Estado do projeto atualizado
+
+- Sprint 3 — Portfolio: **concluída em 23/10/2026**; o utilizador confirmou que os testes de S3-07 e S3-08 passaram.
+- Sprint atual/próxima: Sprint 4 — Design & UX, com planejamento detalhado registado acima.
+- Datas do Sprint 4: **proposta** de 24/10/2026 a 31/10/2026; aguarda confirmação.
+- Objetivo imediato: iniciar S4-01 após a confirmação do planejamento e do período.
