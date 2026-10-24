@@ -33,7 +33,7 @@ button { font: inherit; }
 h1, h2, h3, header nav > a, footer a.text-xl { font-family: 'Oxanium', system-ui, sans-serif; }
 h1, h2, h3 { line-height: 1.15; }
 
-header { border-bottom: 1px solid rgb(136 214 250 / 18%); background: var(--rs-deep); }
+header { position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgb(136 214 250 / 18%); background: var(--rs-deep); }
 header nav {
   display: flex;
   width: min(100% - 64px, 1200px);
@@ -98,10 +98,18 @@ main > section p { color: var(--rs-ice); }
 #sobre .max-w-4xl p + p { margin-top: var(--rs-space-6); }
 
 #servicos {
-  background: var(--rs-deep) url('./assets/network-pattern.svg') right center / min(54%, 760px) no-repeat;
+  background-color: var(--rs-deep);
+  background-image: url('./assets/network-pattern.svg');
+  background-position: right top;
+    background-size: 60vw auto;
+  background-repeat: no-repeat;
 }
 #processo {
-  background: var(--rs-deep) url('./assets/digital-particles.svg') right center / min(54%, 760px) no-repeat;
+  background-color: var(--rs-deep);
+  background-image: url('./assets/digital-particles.svg');
+  background-position: right top;
+    background-size: 60vw auto;
+  background-repeat: no-repeat;
 }
 #servicos .grid, #processo .grid { gap: var(--rs-space-6); }
 #servicos .grid article, #processo .grid article {
@@ -130,7 +138,7 @@ main > section p { color: var(--rs-ice); }
 #projetos { background: var(--rs-blue); }
 #projetos h2 { color: var(--rs-ice); }
 #projetos p { color: var(--rs-ice); }
-#projetos #portfolio-grid { gap: 32px 24px; }
+#projetos #portfolio-grid { gap: 40px 24px; }
 #projetos #portfolio-grid > article { margin-top: 0; padding: 0; overflow: visible; border: 0; border-radius: 0; background: transparent; }
 #projetos .portfolio-trigger { border-radius: 8px; background: transparent; }
 #projetos .portfolio-trigger img { display: block; width: 100%; object-fit: cover; }
@@ -182,14 +190,15 @@ footer [class*="border-t"] { border-color: rgb(136 214 250 / 18%); }
   #hero .flex.flex-wrap a { width: 100%; }
   main > section .mb-12 { margin-bottom: 32px; }
   #servicos .grid article, #processo .grid article { padding: 24px; }
-  #projetos #portfolio-grid { gap: 24px; }
+  #projetos #portfolio-grid { gap: 32px 24px; }
   #projetos #portfolio-grid article { padding-block: 0; }
-  #servicos, #processo { background-size: 90% auto; }
+  #servicos, #processo { background-image: none; }
   #project-modal > div { padding: 20px; }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   :root { font-size: 16px; }
+  #servicos, #processo { background-size: 60vw auto; }
   header nav, main > section > div, footer > div { width: calc(100% - 64px); }
   header nav ul { gap: 16px; }
   header nav li a { font-size: .82rem; }
@@ -198,6 +207,9 @@ footer [class*="border-t"] { border-color: rgb(136 214 250 / 18%); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+
+
 
 
 
