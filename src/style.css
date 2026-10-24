@@ -64,11 +64,11 @@ main > section p { color: var(--rs-ice); }
 
 #hero {
   min-height: min(760px, calc(100svh - 76px));
-  padding-block: clamp(64px, 9vw, 120px);
+  padding-block: clamp(64px, 9vw, 96px);
   background: radial-gradient(ellipse at 78% 30%, rgb(2 169 247 / 14%), transparent 38%), var(--rs-deep);
 }
 #hero > div { padding-block: 0; }
-#hero .grid { gap: clamp(32px, 6vw, 80px); }
+#hero .grid { gap: clamp(32px, 6vw, 64px); }
 #hero h1 { max-width: 11ch; color: var(--rs-ice); font-size: clamp(2.8rem, 6vw, 5rem); }
 #hero p.text-sm, main > section > div > div > p.text-sm { color: var(--rs-sky); letter-spacing: .16em; }
 #hero .grid > div:first-child > p:not(.text-sm) { max-width: 38rem; color: var(--rs-ice); }
@@ -115,7 +115,7 @@ main > section p { color: var(--rs-ice); }
 #servicos .grid article, #processo .grid article {
   min-width: 0;
   border-radius: 12px;
-  padding: clamp(20px, 2.5vw, 32px);
+  padding: clamp(24px, 2.5vw, 32px);
   background: var(--rs-blue);
 }
 #servicos .grid article h3, #processo .grid article h3 { margin-bottom: var(--rs-space-3); color: var(--rs-ice); }
@@ -138,7 +138,7 @@ main > section p { color: var(--rs-ice); }
 #projetos { background: var(--rs-blue); }
 #projetos h2 { color: var(--rs-ice); }
 #projetos p { color: var(--rs-ice); }
-#projetos #portfolio-grid { gap: 40px 24px; }
+#projetos #portfolio-grid { gap: 48px 24px; }
 #projetos #portfolio-grid > article { margin-top: 0; padding: 0; overflow: visible; border: 0; border-radius: 0; background: transparent; }
 #projetos .portfolio-trigger { border-radius: 8px; background: transparent; }
 #projetos .portfolio-trigger img { display: block; width: 100%; object-fit: cover; }
@@ -163,6 +163,9 @@ main > section p { color: var(--rs-ice); }
 footer { background: var(--rs-deep); }
 footer > div { width: min(100% - 64px, 1200px); margin-inline: auto; padding-block: var(--rs-space-8); }
 footer nav ul { gap: var(--rs-space-4) var(--rs-space-6); }
+footer .footer-socials a { display: inline-flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; border-radius: 8px; color: var(--rs-sky); transition: color 160ms ease, background-color 160ms ease; }
+footer .footer-socials a:hover { color: var(--rs-ice); background: rgb(136 214 250 / 10%); }
+footer .footer-socials svg { width: 24px; height: 24px; }
 footer p { color: var(--rs-sky); }
 footer [class*="border-t"] { border-color: rgb(136 214 250 / 18%); }
 
