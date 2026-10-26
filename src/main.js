@@ -197,3 +197,22 @@ categoryFilters.forEach((filter) => {
     })
   })
 })
+const revealCards = document.querySelectorAll('#servicos .grid article, #processo .grid article')
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+if (revealCards.length && 'IntersectionObserver' in window && !reduceMotion) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible')
+        observer.unobserve(entry.target)
+      }
+    })
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' })
+
+  revealCards.forEach((card) => {
+    card.setAttribute('data-scroll-reveal', '')
+    revealObserver.observe(card)
+  })
+  document.documentElement.classList.add('motion-reveal')
+}
