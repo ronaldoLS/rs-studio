@@ -99,7 +99,7 @@ main > section p { color: var(--rs-ice); }
 
 #sobre { background: var(--rs-ice); }
 #sobre h2 { color: var(--rs-deep); }
-#sobre p { color: var(--rs-blue); }
+#sobre p { color: var(--rs-deep); }
 #sobre > div > div > p.text-sm { color: var(--rs-electric); }
 #sobre .max-w-4xl { max-width: 52rem; }
 #sobre .max-w-4xl p + p { margin-top: var(--rs-space-6); }
