@@ -181,8 +181,24 @@ footer .footer-socials svg { width: 24px; height: 24px; }
 footer p { color: var(--rs-sky); }
 footer [class*="border-t"] { border-color: rgb(136 214 250 / 18%); }
 
-#project-modal { border: 1px solid rgb(3 87 123 / 18%); background: var(--rs-ice); color: var(--rs-deep); }
-#project-modal::backdrop { background: rgb(1 49 63 / 82%); }
+#project-modal {
+  border: 1px solid rgb(3 87 123 / 18%);
+  background: var(--rs-ice);
+  color: var(--rs-deep);
+  opacity: 0;
+  transform: translateY(8px) scale(.985);
+  transition: opacity 180ms ease, transform 180ms ease, display 180ms allow-discrete, overlay 180ms allow-discrete;
+}
+#project-modal[open] { opacity: 1; transform: translateY(0) scale(1); }
+#project-modal::backdrop {
+  background: rgb(1 49 63 / 0%);
+  transition: background-color 180ms ease, display 180ms allow-discrete, overlay 180ms allow-discrete;
+}
+#project-modal[open]::backdrop { background: rgb(1 49 63 / 82%); }
+@starting-style {
+  #project-modal[open] { opacity: 0; transform: translateY(8px) scale(.985); }
+  #project-modal[open]::backdrop { background: rgb(1 49 63 / 0%); }
+}
 #project-modal p { color: var(--rs-blue); }
 #project-modal h2 { color: var(--rs-deep); }
 #project-modal button[data-modal-close] { border-color: rgb(3 87 123 / 18%); background: white; color: var(--rs-deep); }
