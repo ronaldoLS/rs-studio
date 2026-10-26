@@ -89,6 +89,11 @@ main > section p { color: var(--rs-ice); }
 }
 #hero .flex.flex-wrap a:hover, #contato a[href^="mailto"]:hover { border-color: var(--rs-sky); background: var(--rs-sky); box-shadow: 0 6px 18px rgb(2 169 247 / 20%); transform: translateY(-2px); }
 #hero .flex.flex-wrap a:active, #contato a[href^="mailto"]:active { transform: translateY(0); }
+#contato a[href^="mailto"]:hover, #contato a[href^="mailto"]:focus-visible {
+  border-color: var(--rs-deep);
+  background: var(--rs-deep);
+  color: var(--rs-electric);
+}
 #hero .flex.flex-wrap a:last-child { border-color: var(--rs-sky); background: transparent; color: var(--rs-ice); }
 #hero .flex.flex-wrap a:last-child:hover { background: var(--rs-blue); }
 
