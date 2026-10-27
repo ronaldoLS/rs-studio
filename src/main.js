@@ -1,5 +1,37 @@
 import './style.css'
 
+const headerNav = document.querySelector('header nav')
+const menuToggle = headerNav.querySelector('.header-menu-toggle')
+const primaryNavigation = headerNav.querySelector('#primary-navigation')
+const mobileNavigation = window.matchMedia('(max-width: 767px)')
+
+function updateNavigation(open = true) {
+  const isMobile = mobileNavigation.matches
+  const isOpen = !isMobile || open
+
+  headerNav.dataset.menuOpen = String(isOpen)
+  menuToggle.hidden = !isMobile
+  menuToggle.setAttribute('aria-expanded', String(isOpen))
+  const actionLabel = isOpen ? 'Fechar menu' : 'Abrir menu'
+  menuToggle.setAttribute('aria-label', actionLabel)
+  menuToggle.querySelector('span').textContent = actionLabel
+  primaryNavigation.inert = isMobile && !isOpen
+  primaryNavigation.setAttribute('aria-hidden', String(isMobile && !isOpen))
+}
+
+menuToggle.addEventListener('click', () => {
+  updateNavigation(headerNav.dataset.menuOpen !== 'true')
+})
+
+primaryNavigation.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener('click', () => {
+    if (mobileNavigation.matches) updateNavigation(false)
+  })
+})
+
+mobileNavigation.addEventListener('change', () => updateNavigation(false))
+updateNavigation(false)
+
 const projects = {
   calculadora: {
     title: 'Calculadora para compras', category: 'Desenvolvimento web',
