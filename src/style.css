@@ -53,6 +53,23 @@ header nav > a, footer a.text-xl {
 header nav ul, footer nav ul { display: flex; margin: 0; padding: 0; list-style: none; }
 header nav ul { align-items: center; gap: var(--rs-space-6); }
 header nav li a, footer nav li a { color: var(--rs-ice); font-size: .9rem; font-weight: 600; text-decoration: none; transition: color 160ms ease; }
+header nav li a { position: relative; display: inline-block; }
+header nav li a::after {
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  background: var(--rs-electric);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+header nav li a:hover::after, header nav li a:focus-visible::after { transform: scaleX(1); }
+@media (hover: none) {
+  header nav li a:hover::after { transform: scaleX(0); }
+}
 header nav li a:hover, footer nav li a:hover { color: var(--rs-electric); }
 
 main > section { padding-block: clamp(48px, 7vw, 96px); }
@@ -230,6 +247,7 @@ html.motion-reveal #processo .grid article:nth-child(3) { transition-delay: 160m
 html.motion-reveal #servicos .grid article:nth-child(4),
 html.motion-reveal #processo .grid article:nth-child(4) { transition-delay: 240ms; }
 @media (max-width: 767px) {
+  main > section { scroll-margin-top: 80px; }
   :root { font-size: 16px; }
   header nav { width: calc(100% - 40px); min-height: 68px; align-items: flex-start; flex-direction: column; gap: 4px; padding-block: 10px; }
   header nav > a { line-height: 1.2; }
