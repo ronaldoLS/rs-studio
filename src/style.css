@@ -50,6 +50,18 @@ header nav > a, footer a.text-xl {
   letter-spacing: -0.04em;
   text-decoration: none;
 }
+header nav > a.brand-logo, footer a.footer-logo {
+  display: inline-flex;
+  width: 160px;
+  flex: 0 0 auto;
+  align-items: center;
+  line-height: 0;
+}
+header nav > a.brand-logo img, footer a.footer-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .header-menu-toggle { display: none; }
 header nav ul, footer nav ul { display: flex; margin: 0; padding: 0; list-style: none; }
 header nav ul { align-items: center; gap: var(--rs-space-6); }
@@ -81,12 +93,25 @@ main > section .mb-12 > p { margin-bottom: var(--rs-space-3); }
 main > section p { color: var(--rs-ice); }
 
 #hero {
-  min-height: min(760px, calc(100svh - 76px));
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: calc(100svh - 76px);
   padding-block: clamp(64px, 9vw, 96px);
   background: radial-gradient(ellipse at 78% 30%, rgb(2 169 247 / 14%), transparent 38%), var(--rs-deep);
 }
-#hero > div { padding-block: 0; }
+#hero > div { position: relative; z-index: 2; padding-block: 0; }
 #hero .grid { gap: clamp(32px, 6vw, 64px); }
+#hero::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: url("./assets/hero_background_16_9.png") 64% center / cover no-repeat;
+  content: "";
+  mask-image: linear-gradient(90deg, transparent 0%, rgb(0 0 0 / .1) 28%, #000 58%);
+  pointer-events: none;
+}
+#hero .hero-visual { display: none; }
 #hero h1 { max-width: 11ch; color: var(--rs-ice); font-size: clamp(2.8rem, 6vw, 5rem); }
 #hero p.text-sm, main > section > div > div > p.text-sm { color: var(--rs-electric); letter-spacing: .16em; }
 #hero .grid > div:first-child > p:not(.text-sm) { max-width: 38rem; color: var(--rs-ice); }
@@ -252,6 +277,8 @@ html.motion-reveal #processo .grid article:nth-child(4) { transition-delay: 240m
   :root { font-size: 16px; }
   header nav { display: grid; width: calc(100% - 40px); min-height: 68px; align-items: center; grid-template-columns: 1fr auto; grid-template-areas: 'brand toggle' 'links links'; gap: 4px; padding-block: 10px; }
   header nav > a { grid-area: brand; line-height: 1.2; }
+  header nav > a.brand-logo { width: 132px; }
+  footer a.footer-logo { width: 150px; }
   .header-menu-toggle { display: inline-flex; grid-area: toggle; width: 44px; min-height: 44px; align-items: center; justify-content: center; border: 1px solid rgb(136 214 250 / 35%); border-radius: 8px; padding: 8px; background: transparent; color: var(--rs-ice); cursor: pointer; }
   .header-menu-toggle svg { width: 20px; height: 20px; }
   header nav ul { grid-area: links; width: 100%; max-height: 40px; gap: 20px; overflow-x: auto; padding: 4px 0 6px; scrollbar-width: thin; opacity: 1; transition: max-height 180ms ease, opacity 180ms ease, visibility 180ms ease; }
@@ -262,6 +289,7 @@ html.motion-reveal #processo .grid article:nth-child(4) { transition-delay: 240m
   main > section > div, footer > div { width: calc(100% - 40px); }
   #hero { min-height: auto; padding-block: 64px; }
   #hero .grid { grid-template-columns: minmax(0, 1fr); }
+  #hero::before, #hero .hero-visual { display: none; }
   #hero h1 { font-size: clamp(2.65rem, 12vw, 3.6rem); }
   #hero .flex.flex-wrap a { width: 100%; }
   main > section .mb-12 { margin-bottom: 32px; }
