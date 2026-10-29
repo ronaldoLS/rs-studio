@@ -111,7 +111,7 @@ main > section p { color: var(--rs-ice); }
   inset: 0;
   background: url("./assets/hero_background_16_9.png") 64% center / cover no-repeat;
   content: "";
-  mask-image: linear-gradient(90deg, transparent 0%, rgb(0 0 0 / .1) 28%, #000 58%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgb(0 0 0 / .1) 45%, #000 58%);
   pointer-events: none;
 }
 #hero .hero-visual { display: none; }
@@ -147,7 +147,7 @@ main > section p { color: var(--rs-ice); }
 #sobre { background: var(--rs-ice); }
 #sobre h2 { color: var(--rs-deep); }
 #sobre p { color: var(--rs-deep); }
-#sobre > div > div > p.text-sm { color: var(--rs-electric); }
+#sobre > div > div > p.text-sm { color: var(--rs-blue); }
 #sobre .max-w-4xl { max-width: 52rem; }
 #sobre .max-w-4xl p + p { margin-top: var(--rs-space-6); }
 
@@ -220,7 +220,7 @@ main > section p { color: var(--rs-ice); }
 
 #contato { background: var(--rs-ice); }
 #contato > div > :is(p, h2) { color: var(--rs-deep); }
-#contato > div > p.text-sm { margin-bottom: var(--rs-space-3); color: var(--rs-electric); }
+#contato > div > p.text-sm { margin-bottom: var(--rs-space-3); color: var(--rs-blue); }
 #contato a[href^="mailto"] { margin-top: var(--rs-space-8); }
 #contato .platform-profiles {
   display: flex;
@@ -326,6 +326,8 @@ html.motion-reveal #processo .grid article:nth-child(4) { transition-delay: 240m
 
 @media (min-width: 768px) and (max-width: 1024px) {
   :root { font-size: 16px; }
+  #hero { min-height: auto; padding-block: clamp(48px, 8vw, 80px); }
+  #hero::before { background-size: cover; background-position: 64% center; }
   #servicos, #processo { background-size: 60vw auto; }
   header nav, main > section > div, footer > div { width: calc(100% - 64px); }
   header nav ul { gap: 16px; }
