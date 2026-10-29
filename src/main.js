@@ -3,6 +3,8 @@ import './style.css'
 const headerNav = document.querySelector('header nav')
 const menuToggle = headerNav.querySelector('.header-menu-toggle')
 const primaryNavigation = headerNav.querySelector('#primary-navigation')
+const navigationLinks = [...primaryNavigation.querySelectorAll('a[href^="#"]')]
+const navigationSections = [document.querySelector("#hero"), ...navigationLinks.map((link) => document.querySelector(link.getAttribute('href')))].filter(Boolean)
 const mobileNavigation = window.matchMedia('(max-width: 767px)')
 
 function updateNavigation(open = true) {
@@ -23,11 +25,31 @@ menuToggle.addEventListener('click', () => {
   updateNavigation(headerNav.dataset.menuOpen !== 'true')
 })
 
+function setActiveNavigation(section) {
+  navigationLinks.forEach((link) => {
+    if (link.hash === `#${section.id}`) link.setAttribute('aria-current', 'location')
+    else link.removeAttribute('aria-current')
+  })
+}
+
 primaryNavigation.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', () => {
+    const section = document.querySelector(link.getAttribute('href'))
+    if (section) setActiveNavigation(section)
     if (mobileNavigation.matches) updateNavigation(false)
   })
 })
+
+if ('IntersectionObserver' in window) {
+  const navigationObserver = new IntersectionObserver((entries) => {
+    const visibleSections = entries.filter((entry) => entry.isIntersecting)
+    if (!visibleSections.length) return
+    visibleSections.sort((a, b) => b.intersectionRatio - a.intersectionRatio)
+    setActiveNavigation(visibleSections[0].target)
+  }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 })
+
+  navigationSections.forEach((section) => navigationObserver.observe(section))
+}
 
 mobileNavigation.addEventListener('change', () => updateNavigation(false))
 updateNavigation(false)

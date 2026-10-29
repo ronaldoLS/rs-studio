@@ -84,10 +84,13 @@ header nav li a:hover::after, header nav li a:focus-visible::after { transform: 
   header nav li a:hover::after { transform: scaleX(0); }
 }
 header nav li a:hover, footer nav li a:hover { color: var(--rs-electric); }
+header nav li a[aria-current="location"] { color: var(--rs-electric); }
+header nav li a[aria-current="location"]::after { transform: scaleX(1); }
 
 main > section { padding-block: clamp(48px, 7vw, 96px); }
 main > section > div { width: min(100% - 64px, 1200px); margin-inline: auto; }
 main > section h2 { max-width: 18ch; }
+main > section h2 .title-accent { color: #02A9F7; }
 main > section .mb-12 { margin-bottom: var(--rs-space-12); }
 main > section .mb-12 > p { margin-bottom: var(--rs-space-3); }
 main > section p { color: var(--rs-ice); }
@@ -113,6 +116,7 @@ main > section p { color: var(--rs-ice); }
 }
 #hero .hero-visual { display: none; }
 #hero h1 { max-width: 11ch; color: var(--rs-ice); font-size: clamp(2.8rem, 6vw, 5rem); }
+#hero h1 .title-accent { color: #02A9F7; }
 #hero p.text-sm, main > section > div > div > p.text-sm { color: var(--rs-electric); letter-spacing: .16em; }
 #hero .grid > div:first-child > p:not(.text-sm) { max-width: 38rem; color: var(--rs-ice); }
 #hero .flex.flex-wrap { gap: var(--rs-space-4); }
@@ -218,6 +222,26 @@ main > section p { color: var(--rs-ice); }
 #contato > div > :is(p, h2) { color: var(--rs-deep); }
 #contato > div > p.text-sm { margin-bottom: var(--rs-space-3); color: var(--rs-electric); }
 #contato a[href^="mailto"] { margin-top: var(--rs-space-8); }
+#contato .platform-profiles {
+  display: flex;
+  max-width: 38rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--rs-space-4);
+  margin-top: var(--rs-space-12);
+  border-top: 1px solid rgb(1 49 63 / 16%);
+  padding-top: var(--rs-space-6);
+}
+#contato .platform-profiles h3 { margin: 0; color: var(--rs-deep); font-size: .95rem; font-weight: 700; }
+#contato .platform-profiles ul { display: flex; flex-wrap: wrap; gap: var(--rs-space-4); margin: 0; padding: 0; list-style: none; }
+#contato .platform-profiles a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+#contato .platform-profiles a:hover { transform: translateY(-2px); }
+#contato .platform-profiles img { display: block; width: auto; max-width: 170px; height: auto; max-height: 36px; }
 footer { background: var(--rs-deep); }
 footer > div { width: min(100% - 64px, 1200px); margin-inline: auto; padding-block: var(--rs-space-8); }
 footer nav ul { gap: var(--rs-space-4) var(--rs-space-6); }
