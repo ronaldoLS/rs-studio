@@ -1,7 +1,7 @@
 # RS Studio — Project Context
 
 > Documento oficial de contexto e referência do projeto da landing page da RS Studio.
-> Última atualização: 11/10/2026
+> Última atualização: 04/11/2026
 
 ---
 
@@ -203,14 +203,14 @@ Prioridade: Alta
 
 Criar formulário para potenciais clientes entrarem em contacto.
 
-Status: **Planejado para Sprint 5**
+Status: **Adiado — fora do âmbito atual da Sprint 5; manter no backlog para eventual necessidade futura**
 
 ### PB-13 — Validação e feedback do formulário
 Prioridade: Alta
 
 Validar campos, apresentar erros e feedback de envio.
 
-Status: **Planejado para Sprint 5**
+Status: **Adiado — fora do âmbito atual da Sprint 5; manter no backlog para eventual necessidade futura**
 
 ---
 
@@ -1054,15 +1054,15 @@ O Sprint Backlog deve definir, quando aplicável:
 
 ### Sprint concluída
 
-**Sprint 2 — Content & Landing Page**
+**Sprint 4 — Design & UX**
 
 ### Status
 
-**Concluída — 11/10/2026**
+**Concluída — atualização registada em 04/11/2026.** As tarefas S4-01 a S4-11 foram confirmadas como concluídas. S4-09 — refinamento mobile — foi concluída com testes aprovados; S4-10 — revisão UX — foi concluída; S4-11 — elemento visual do Hero — foi implementada e versionada.
 
 ### Próximo objetivo
 
-Preparar o Sprint Planning da **Sprint 3 — Portfolio** antes de iniciar a implementação.
+Finalizar o Sprint Backlog da **Sprint 5 — Contact & Conversion** e iniciar a execução depois de o backlog ser finalizado.
 
 ### Estado técnico atual
 
@@ -1082,7 +1082,7 @@ A landing page possui uma fundação funcional com:
 
 ### Próximo passo
 
-Realizar o Sprint Planning da Sprint 3, detalhando objetivo, tarefas, critérios de aceitação, dependências, estimativas e versionamento esperado.
+Finalizar o Sprint Backlog da Sprint 5 — Contact & Conversion. Datas, estimativas e critérios de aceitação podem ser propostos durante o planeamento; não estão registados como acordados.
 
 ---
 
@@ -1168,9 +1168,9 @@ Quando uma nova conversa for iniciada dentro do projeto:
 Sprint 0 — Discovery & Setup       ✅
 Sprint 1 — Foundation              ✅
 Sprint 2 — Content                 ✅
-Sprint 3 — Portfolio               ▶
-Sprint 4 — Design & UX             ⏳
-Sprint 5 — Contact & Conversion    ⏳
+Sprint 3 — Portfolio               ✅
+Sprint 4 — Design & UX             ✅
+Sprint 5 — Contact & Conversion    ▶ Planning
 Sprint 6 — QA & Deploy             ⏳
 ```
 
@@ -1279,3 +1279,55 @@ Além da Definition of Done geral do projeto:
 - Sprint atual/próxima: Sprint 4 — Design & UX, com planejamento detalhado registado acima.
 - Datas do Sprint 4: **proposta** de 24/10/2026 a 31/10/2026; aguarda confirmação.
 - Objetivo imediato: iniciar S4-01 após a confirmação do planejamento e do período.
+
+---
+
+# 17. Atualização de Sprint — 04/11/2026
+
+> Esta atualização complementa o documento e preserva integralmente o histórico anterior. O estado foi atualizado com base nas confirmações do utilizador.
+
+## Sprint 4 — Design & UX: encerramento
+
+**Estado:** Concluída. As tarefas **S4-01 a S4-11** foram confirmadas como concluídas.
+
+- S4-09 — Refinamento mobile: concluído; testes passaram.
+- S4-10 — Revisão UX: concluída.
+- S4-11 — Implementar elemento visual do Hero: implementado e versionado.
+- S4-01 a S4-08: concluídas conforme confirmação anterior do utilizador.
+
+## Sprint 5 — Contact & Conversion: planeamento
+
+**Estado:** Sprint 5 Planning — pronta para começar depois de o Sprint Backlog ser finalizado.
+
+### Decisão de âmbito: contacto sem formulário
+
+O utilizador confirmou que os links do Instagram e do email já estão apresentados no site e funcionam. A Sprint 5 deve aproveitar esses canais diretos para facilitar o contacto e a conversão.
+
+Não fazem parte do âmbito atual: formulário, validação de formulário, backend de formulário ou recolha de dados através de formulário. A decisão evita complexidade, custos e encargos de privacidade e segurança que não são necessários para a necessidade atual.
+
+**PB-12 — Formulário de contacto** e **PB-13 — Validação e feedback do formulário** permanecem no Product Backlog como itens adiados e fora do âmbito atual; não foram eliminados.
+
+### Sprint Goal
+
+> Facilitar a captação de clientes através de CTAs claros e dos canais de contacto direto já existentes, com uma experiência simples e consistente em desktop e mobile.
+
+### Sprint Backlog proposto
+
+As tarefas abaixo são propostas para o planeamento. O estado funcional dos links de Instagram e email já foi confirmado pelo utilizador; a revisão prevista deve verificar o percurso completo e a experiência.
+
+| ID | Tarefa | Escopo/resultado esperado |
+|---|---|---|
+| S5-01 | Rever canais e links de contacto existentes | Confirmar os destinos do Instagram e do email; ambos já foram reportados como funcionais. |
+| S5-02 | Rever e refinar CTAs | Tornar as chamadas para ação claras e coerentes com os canais diretos. |
+| S5-03 | Melhorar mensagens e instruções na secção de contacto | Ajustar somente se a revisão identificar necessidade. |
+| S5-04 | Testar o percurso de contacto de ponta a ponta | Percorrer email e Instagram em desktop e mobile. |
+| S5-05 | Verificar destinos dos CTAs e acessibilidade/UX | Confirmar destinos corretos, clareza e facilidade de utilização. |
+| S5-06 | Corrigir problemas encontrados e executar `npm run build` | Corrigir apenas problemas identificados e validar o build de produção. |
+
+Não estão confirmadas datas, duração, capacidade ou estimativas para a Sprint 5. Esses valores, assim como critérios de aceitação detalhados, podem ser propostos durante o Sprint Planning, sem serem tratados como decisões já acordadas.
+
+## Estado atual e próximo passo
+
+- Sprint 4 — Design & UX: **concluída**.
+- Sprint 5 — Contact & Conversion: **em planeamento; pronta para começar após finalizar o Sprint Backlog**.
+- Próximo passo: finalizar e validar o Sprint Backlog da Sprint 5 antes de iniciar a execução.
