@@ -90,7 +90,7 @@ header nav li a[aria-current="location"]::after { transform: scaleX(1); }
 main > section { padding-block: clamp(48px, 7vw, 96px); }
 main > section > div { width: min(100% - 64px, 1200px); margin-inline: auto; }
 main > section h2 { max-width: 18ch; }
-main > section h2 .title-accent { color: #02A9F7; }
+main > section h2 .title-accent { color: var(--rs-electric); }
 main > section .mb-12 { margin-bottom: var(--rs-space-12); }
 main > section .mb-12 > p { margin-bottom: var(--rs-space-3); }
 main > section p { color: var(--rs-ice); }
@@ -116,11 +116,11 @@ main > section p { color: var(--rs-ice); }
 }
 #hero .hero-visual { display: none; }
 #hero h1 { max-width: 11ch; color: var(--rs-ice); font-size: clamp(2.8rem, 6vw, 5rem); }
-#hero h1 .title-accent { color: #02A9F7; }
+#hero h1 .title-accent { color: var(--rs-electric); }
 #hero p.text-sm, main > section > div > div > p.text-sm { color: var(--rs-electric); letter-spacing: .16em; }
 #hero .grid > div:first-child > p:not(.text-sm) { max-width: 38rem; color: var(--rs-ice); }
 #hero .flex.flex-wrap { gap: var(--rs-space-4); }
-#hero .flex.flex-wrap a, #contato a[href^="mailto"] {
+#hero .flex.flex-wrap a {
   display: inline-flex;
   min-height: 52px;
   align-items: center;
@@ -134,13 +134,8 @@ main > section p { color: var(--rs-ice); }
   font-weight: 700;
   transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
-#hero .flex.flex-wrap a:hover, #contato a[href^="mailto"]:hover { border-color: var(--rs-sky); background: var(--rs-sky); box-shadow: 0 6px 18px rgb(2 169 247 / 20%); transform: translateY(-2px); }
-#hero .flex.flex-wrap a:active, #contato a[href^="mailto"]:active { transform: translateY(0); }
-#contato a[href^="mailto"]:hover, #contato a[href^="mailto"]:focus-visible {
-  border-color: var(--rs-deep);
-  background: var(--rs-deep);
-  color: var(--rs-electric);
-}
+#hero .flex.flex-wrap a:hover { border-color: var(--rs-sky); background: var(--rs-sky); box-shadow: 0 6px 18px rgb(2 169 247 / 20%); transform: translateY(-2px); }
+#hero .flex.flex-wrap a:active { transform: translateY(0); }
 #hero .flex.flex-wrap a:last-child { border-color: var(--rs-sky); background: transparent; color: var(--rs-ice); }
 #hero .flex.flex-wrap a:last-child:hover { background: var(--rs-blue); }
 
@@ -221,7 +216,25 @@ main > section p { color: var(--rs-ice); }
 #contato { background: var(--rs-ice); }
 #contato > div > :is(p, h2) { color: var(--rs-deep); }
 #contato > div > p.text-sm { margin-bottom: var(--rs-space-3); color: var(--rs-blue); }
-#contato a[href^="mailto"] { margin-top: var(--rs-space-8); }
+#contato .contact-actions { display: flex; flex-wrap: wrap; gap: var(--rs-space-4); margin-top: var(--rs-space-8); }
+#contato .contact-actions a {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rs-electric);
+  border-radius: 8px;
+  padding: 12px 24px;
+  color: var(--rs-deep);
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+#contato .contact-actions a:first-child { background: var(--rs-electric); }
+#contato .contact-actions a:last-child { border-color: var(--rs-blue); background: transparent; }
+#contato .contact-actions a:hover { border-color: var(--rs-sky); background: var(--rs-sky); box-shadow: 0 6px 18px rgb(2 169 247 / 20%); transform: translateY(-2px); }
+#contato .contact-actions a:focus-visible { outline: 3px solid var(--rs-blue); outline-offset: 3px; }
+#contato .contact-actions a:active { transform: translateY(0); }
 #contato .platform-profiles {
   display: flex;
   max-width: 38rem;
