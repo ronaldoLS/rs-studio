@@ -155,6 +155,7 @@ function selectMedia(project, index) {
     const image = document.createElement('img')
     image.src = media.src
     image.alt = media.alt
+    image.decoding = 'async'
     image.className = 'block max-h-[70dvh] max-w-full object-contain' + (media.fit === 'contain' ? ' bg-neutral-100' : '')
     mediaStage.append(image)
   }
