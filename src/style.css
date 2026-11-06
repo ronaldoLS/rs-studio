@@ -354,7 +354,7 @@ html.motion-reveal #processo .grid article:nth-child(4) { transition-delay: 240m
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
-  #hero .flex.flex-wrap a:hover, #contato a[href^="mailto"]:hover,
+  #hero .flex.flex-wrap a:hover, #contato .contact-actions a:hover, #contato .contact-actions a:active,
   #servicos .grid article:hover, #processo .grid article:hover,
   #projetos .portfolio-trigger:hover img, #projetos .portfolio-trigger:focus-visible img,
   #projetos [data-category-filter]:active, footer .footer-socials a:hover svg,

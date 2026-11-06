@@ -1,7 +1,7 @@
 # RS Studio — Project Context
 
 > Documento oficial de contexto e referência do projeto da landing page da RS Studio.
-> Última atualização: 04/11/2026
+> Última atualização: 06/11/2026
 
 ---
 
@@ -1054,15 +1054,15 @@ O Sprint Backlog deve definir, quando aplicável:
 
 ### Sprint concluída
 
-**Sprint 4 — Design & UX**
+**Sprint 5 — Contact & Conversion**
 
 ### Status
 
-**Concluída — atualização registada em 04/11/2026.** As tarefas S4-01 a S4-11 foram confirmadas como concluídas. S4-09 — refinamento mobile — foi concluída com testes aprovados; S4-10 — revisão UX — foi concluída; S4-11 — elemento visual do Hero — foi implementada e versionada.
+**Concluída em 06/11/2026.** O Sprint Goal foi atingido; os canais diretos de contacto foram revistos e os CTAs foram ajustados. O utilizador confirmou o percurso de contacto em desktop e mobile e confirmou o ajuste do Hero no preset do iPad Pro 13. O build de produção passou.
 
 ### Próximo objetivo
 
-Finalizar o Sprint Backlog da **Sprint 5 — Contact & Conversion** e iniciar a execução depois de o backlog ser finalizado.
+Finalizar e iniciar o planeamento da **Sprint 6 — QA & Deploy**, incluindo a decisão sobre a plataforma/URL de publicação antes de preparar o deploy.
 
 ### Estado técnico atual
 
@@ -1070,20 +1070,18 @@ A landing page possui uma fundação funcional com:
 
 - `index.html` contendo a estrutura HTML;
 - `src/main.js` reservado para comportamento JavaScript;
-- `src/style.css` contendo a importação do Tailwind;
+- `src/style.css` contendo a importação do Tailwind e tokens da identidade visual;
 - Tailwind integrado ao Vite;
 - Header / Navbar;
-- Hero;
-- seções principais;
-- Footer;
+- Hero com comportamento ajustado para tablets largos com ecrã tátil;
+- seções principais, incluindo Contacto com CTAs de email e Instagram;
 - navegação interna;
-- responsividade inicial;
-- build de produção validado.
+- responsividade validada pelo utilizador em desktop, mobile e no preset iPad Pro 13;
+- build de produção validado em 06/11/2026.
 
 ### Próximo passo
 
-Finalizar o Sprint Backlog da Sprint 5 — Contact & Conversion. Datas, estimativas e critérios de aceitação podem ser propostos durante o planeamento; não estão registados como acordados.
-
+Aprovar o Sprint Backlog proposto da Sprint 6 e decidir onde a landing page será publicada. Datas, capacidade e estimativas permanecem propostas até confirmação.
 ---
 
 # 12. Histórico das Sprints
@@ -1170,8 +1168,8 @@ Sprint 1 — Foundation              ✅
 Sprint 2 — Content                 ✅
 Sprint 3 — Portfolio               ✅
 Sprint 4 — Design & UX             ✅
-Sprint 5 — Contact & Conversion    ▶ Planning
-Sprint 6 — QA & Deploy             ⏳
+Sprint 5 — Contact & Conversion    ✅
+Sprint 6 — QA & Deploy             ▶ Planning
 ```
 
 ---
@@ -1331,3 +1329,78 @@ Não estão confirmadas datas, duração, capacidade ou estimativas para a Sprin
 - Sprint 4 — Design & UX: **concluída**.
 - Sprint 5 — Contact & Conversion: **em planeamento; pronta para começar após finalizar o Sprint Backlog**.
 - Próximo passo: finalizar e validar o Sprint Backlog da Sprint 5 antes de iniciar a execução.
+---
+
+# 18. Atualização de Sprint — 06/11/2026
+
+> Esta atualização acrescenta o encerramento da Sprint 5 e o planeamento proposto para a Sprint 6, preservando o histórico anterior.
+
+## Sprint 5 — Contact & Conversion: encerramento
+
+**Estado:** Concluída em 06/11/2026.
+
+**Sprint Goal atingido:** facilitar a captação de clientes através de CTAs claros e dos canais diretos existentes, com experiência consistente em desktop e mobile.
+
+### Resultado registado
+
+- S5-01 — Canais de contacto: destinos de email e Instagram revistos.
+- S5-02 — CTAs: CTA de Instagram adicionado à secção Contacto, mantendo o email como ação principal.
+- S5-03 — Mensagens: texto atualizado para explicar a escolha do canal de contacto.
+- S5-04 — Percurso de contacto: o utilizador confirmou que os CTAs aparecem e funcionam em desktop e mobile.
+- S5-05 — Destinos e UX/acessibilidade: links, nomes acessíveis e foco revistos; movimento reduzido passou a incluir os dois CTAs.
+- S5-06 — Correções e build: comportamento do Hero ajustado para tablets largos com ecrã tátil após o utilizador identificar o problema no iPad Pro 13; o utilizador confirmou o resultado visual. O build `npm run build` passou.
+- Os destaques dos títulos passaram a usar `var(--rs-electric)` em vez de repetir o valor hexadecimal.
+
+### Sprint Review
+
+O resultado foi confirmado pelo utilizador: os canais de contacto funcionam em desktop e mobile e o Hero apresenta a altura esperada no preset do iPad Pro 13. O Sprint Goal foi considerado atingido.
+
+### Sprint Retrospective
+
+O utilizador não indicou pontos adicionais para registar nem ações de melhoria para esta Sprint.
+
+## Sprint 6 — QA & Deploy: planeamento proposto
+
+**Estado:** em planeamento; datas, estimativas e backlog abaixo são propostas, ainda não confirmadas.
+
+### Sprint Goal
+
+> Preparar a landing page para publicação, validando estrutura, acessibilidade, SEO, performance e responsividade; corrigir problemas prioritários e validar a versão publicada.
+
+### Período e capacidade propostos
+
+**07/11/2026 a 14/11/2026**, com estimativa total de aproximadamente **20 horas**. Datas e capacidade aguardam confirmação.
+
+### Sprint Backlog proposto
+
+| ID | Tarefa | PB | Estimativa | Prazo proposto | Dependências |
+|---|---|---|---:|---|---|
+| S6-01 | Auditar estrutura e semântica HTML | PB-01 | 1,5 h | 07/11 | Nenhuma |
+| S6-02 | Auditar acessibilidade: teclado, foco, contraste, textos alternativos e movimento reduzido | PB-14 | 3 h | 08/11 | S6-01 |
+| S6-03 | Implementar SEO básico: title, description e hierarquia de títulos | PB-15 | 1,5 h | 09/11 | S6-01 |
+| S6-04 | Otimizar imagens sem perda visual relevante | PB-16 | 2 h | 09/11 | S6-01 |
+| S6-05 | Avaliar e melhorar performance de carregamento | PB-16 | 2 h | 10/11 | S6-04 |
+| S6-06 | Testar compatibilidade em Chrome, Edge e Firefox | PB-17 | 2 h | 11/11 | S6-01 a S6-05 |
+| S6-07 | Testar layouts mobile e tablet, incluindo iPad Pro 13 | PB-03, PB-14 | 1,5 h | 11/11 | S6-01 a S6-05 |
+| S6-08 | Corrigir problemas prioritários encontrados nas auditorias e testes | PB-14 a PB-17 | 3 h | 12/11 | S6-02 a S6-07 |
+| S6-09 | Preparar a versão de produção e checklist de publicação | PB-18 | 1,5 h | 13/11 | S6-08; destino de publicação definido |
+| S6-10 | Publicar a landing page no destino aprovado | PB-18 | 1 h | 14/11 | S6-09 e confirmação do destino |
+| S6-11 | Validar a publicação: carregamento, assets, links e layouts | PB-18 | 1 h | 14/11 | S6-10 |
+
+### Critérios de aceitação propostos
+
+- A auditoria não identifica erros HTML ou problemas semânticos prioritários por corrigir.
+- A navegação por teclado, foco visível, contraste, textos alternativos e movimento reduzido são revistos; problemas prioritários são corrigidos.
+- Title e meta description representam corretamente a RS Studio; a hierarquia dos títulos é coerente.
+- Imagens e recursos não apresentam problemas de carregamento ou peso que prejudiquem a experiência.
+- Chrome, Edge e Firefox são verificados; os principais percursos funcionam em desktop, mobile e tablet.
+- O build de produção passa após as correções.
+- A versão publicada carrega corretamente e os links, assets e layouts principais são validados no destino final.
+
+### Decisão essencial antes do deploy
+
+Definir a plataforma e o endereço de publicação (incluindo se será usado domínio próprio). O destino deve ser decidido antes de S6-09/S6-10; não está definido neste documento.
+
+### Próximo passo
+
+Confirmar o Sprint Backlog e o período propostos, e definir a plataforma/URL de publicação antes de iniciar as tarefas dependentes desse destino.
