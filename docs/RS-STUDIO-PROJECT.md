@@ -1062,7 +1062,7 @@ O Sprint Backlog deve definir, quando aplicável:
 
 ### Próximo objetivo
 
-Finalizar e iniciar o planeamento da **Sprint 6 — QA & Deploy**, incluindo a decisão sobre a plataforma/URL de publicação antes de preparar o deploy.
+Executar a **Sprint 6 — QA & Deploy**, iniciada pela S6-01. A publicação inicial foi escolhida para Cloudflare Pages com subdomínio gratuito `pages.dev`; o período continua proposto.
 
 ### Estado técnico atual
 
@@ -1081,7 +1081,7 @@ A landing page possui uma fundação funcional com:
 
 ### Próximo passo
 
-Aprovar o Sprint Backlog proposto da Sprint 6 e decidir onde a landing page será publicada. Datas, capacidade e estimativas permanecem propostas até confirmação.
+Continuar a execução pela S6-02. Cloudflare Pages com subdomínio `pages.dev` foi escolhido para a publicação inicial; domínio próprio fica adiado. O período de 07/11 a 14/11 permanece proposto.
 ---
 
 # 12. Histórico das Sprints
@@ -1169,7 +1169,7 @@ Sprint 2 — Content                 ✅
 Sprint 3 — Portfolio               ✅
 Sprint 4 — Design & UX             ✅
 Sprint 5 — Contact & Conversion    ✅
-Sprint 6 — QA & Deploy             ▶ Planning
+Sprint 6 — QA & Deploy             ▶ Em execução
 ```
 
 ---
@@ -1361,7 +1361,7 @@ O utilizador não indicou pontos adicionais para registar nem ações de melhori
 
 ## Sprint 6 — QA & Deploy: planeamento proposto
 
-**Estado:** em planeamento; datas, estimativas e backlog abaixo são propostas, ainda não confirmadas.
+**Estado:** em execução; a janela e os detalhes do backlog abaixo permanecem propostas. S6-01 concluída em 06/11/2026; próximo passo S6-02.
 
 ### Sprint Goal
 
@@ -1387,6 +1387,12 @@ O utilizador não indicou pontos adicionais para registar nem ações de melhori
 | S6-10 | Publicar a landing page no destino aprovado | PB-18 | 1 h | 14/11 | S6-09 e confirmação do destino |
 | S6-11 | Validar a publicação: carregamento, assets, links e layouts | PB-18 | 1 h | 14/11 | S6-10 |
 
+### Progresso registado
+
+- S6-01 — Auditoria HTML: concluída em 06/11/2026 por revisão estática. Confirmados idioma `pt-PT`, viewport, um único H1, seis secções com IDs únicos, destinos para todos os links internos analisados e texto alternativo em todas as imagens. Não foram encontrados problemas estruturais prioritários; a auditoria não substitui validação visual cross-browser.
+- S6-02 — Auditoria de acessibilidade: revisão estática concluída em 06/11/2026. Foram revistos foco visível, controlos de teclado, diálogo de projeto, texto alternativo e movimento reduzido. O foco global está definido; o diálogo modal nativo devolve o foco ao acionador ao fechar; os filtros expõem o estado com `aria-pressed`; existe suporte a `prefers-reduced-motion`; as imagens verificadas têm texto alternativo. A revisão estática não substitui testes de teclado e leitores de ecrã nos navegadores-alvo.
+- S6-02 — Contraste: identificados dois ajustes para S6-08. O rótulo pequeno de Projetos usa `--rs-electric` sobre `--rs-blue` (~3,02:1), abaixo de 4,5:1 para texto normal. O contorno preto de foco dos filtros sobre o fundo azul tem ~2,65:1, abaixo de 3:1 para indicador visual. Corrigir ambos em S6-08 e reavaliar os estados de foco relacionados.
+
 ### Critérios de aceitação propostos
 
 - A auditoria não identifica erros HTML ou problemas semânticos prioritários por corrigir.
@@ -1399,8 +1405,8 @@ O utilizador não indicou pontos adicionais para registar nem ações de melhori
 
 ### Decisão essencial antes do deploy
 
-Definir a plataforma e o endereço de publicação (incluindo se será usado domínio próprio). O destino deve ser decidido antes de S6-09/S6-10; não está definido neste documento.
+A plataforma escolhida para a publicação inicial é Cloudflare Pages, usando o subdomínio gratuito `pages.dev`. O domínio próprio fica fora do âmbito atual. A ligação da conta GitHub e a publicação só serão feitas quando S6-09/S6-10 estiverem prontas e o utilizador confirmar o destino final.
 
 ### Próximo passo
 
-Confirmar o Sprint Backlog e o período propostos, e definir a plataforma/URL de publicação antes de iniciar as tarefas dependentes desse destino.
+Próximo passo: S6-03 — SEO básico. A S6-02 foi revista estaticamente; as correções dos contrastes identificados ficam registadas para S6-08. A janela de datas e as estimativas permanecem propostas; a publicação fica para depois das auditorias e da preparação de produção.
