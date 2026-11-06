@@ -1361,7 +1361,7 @@ O utilizador não indicou pontos adicionais para registar nem ações de melhori
 
 ## Sprint 6 — QA & Deploy: planeamento proposto
 
-**Estado:** em execução; a janela e os detalhes do backlog abaixo permanecem propostas. S6-01 concluída em 06/11/2026; próximo passo S6-02.
+**Estado:** em execução; a janela e os detalhes do backlog abaixo permanecem propostas. S6-01 a S6-08 concluídas em 06/11/2026; próximo passo S6-09.
 
 ### Sprint Goal
 
@@ -1391,13 +1391,14 @@ O utilizador não indicou pontos adicionais para registar nem ações de melhori
 
 - S6-01 — Auditoria HTML: concluída em 06/11/2026 por revisão estática. Confirmados idioma `pt-PT`, viewport, um único H1, seis secções com IDs únicos, destinos para todos os links internos analisados e texto alternativo em todas as imagens. Não foram encontrados problemas estruturais prioritários; a auditoria não substitui validação visual cross-browser.
 - S6-02 — Auditoria de acessibilidade: revisão estática concluída em 06/11/2026. Foram revistos foco visível, controlos de teclado, diálogo de projeto, texto alternativo e movimento reduzido. O foco global está definido; o diálogo modal nativo devolve o foco ao acionador ao fechar; os filtros expõem o estado com `aria-pressed`; existe suporte a `prefers-reduced-motion`; as imagens verificadas têm texto alternativo. A revisão estática não substitui testes de teclado e leitores de ecrã nos navegadores-alvo.
-- S6-02 — Contraste: identificados dois ajustes para S6-08. O rótulo pequeno de Projetos usa `--rs-electric` sobre `--rs-blue` (~3,02:1), abaixo de 4,5:1 para texto normal. O contorno preto de foco dos filtros sobre o fundo azul tem ~2,65:1, abaixo de 3:1 para indicador visual. Corrigir ambos em S6-08 e reavaliar os estados de foco relacionados.
+- S6-02 — Contraste: identificados dois problemas e corrigidos em S6-08. O rótulo pequeno de Projetos usava `--rs-electric` sobre `--rs-blue` (~3,02:1), abaixo de 4,5:1 para texto normal. O contorno preto de foco dos filtros sobre o fundo azul tinha ~2,65:1, abaixo de 3:1 para indicador visual.
 - S6-03 — SEO básico: concluída em 06/11/2026. O `<title>` foi refinado para “RS Studio | Design e Desenvolvimento Digital” e foi adicionada uma meta description em português europeu, alinhada com os serviços apresentados. A hierarquia existente mantém um H1 no Hero, H2 nas secções e H3 para conteúdos subordinados; o título H2 do diálogo de projeto é preenchido dinamicamente.
 - S6-04 — Otimização de imagens: concluída em 06/11/2026. Três imagens grandes da galeria (duas de Archery Valley VR e uma de Fuel Rush) foram regravadas como JPEG qualidade 92, mantendo as dimensões originais e sem diferença visual relevante na comparação. O peso conjunto caiu de aproximadamente 1,85 MB para 0,53 MB (cerca de 72%). As imagens da galeria passaram a usar descodificação assíncrona; as restantes imagens foram mantidas porque já têm dimensões e peso reduzidos.
 - S6-05 — Performance de carregamento: concluída em 06/11/2026 por análise estática e build de produção. A folha de estilos externa da Oxanium foi retirada do `@import` CSS e colocada no `<head>` para ser descoberta mais cedo; foram adicionados `preconnect` a `fonts.googleapis.com` e `fonts.gstatic.com`. O fundo do Hero foi convertido de PNG para JPEG qualidade 90, mantendo as dimensões de 1672 × 941 e aparência visual equivalente; o recurso caiu de 1,59 MB para 0,15 MB (~90%). O carregamento da fonte continua dependente da Google Fonts, com fontes de sistema como fallback.
 - S6-06 — Compatibilidade cross-browser: concluída em 06/11/2026. O utilizador confirmou que a página passou nos testes em Chrome, Firefox e Edge, sem problemas encontrados.
 - S6-07 — Layouts mobile e tablet: concluída em 06/11/2026 por emulação responsiva. Foram verificados 320 × 740, 390 × 844, 768 × 1024 e 1032 × 1376 (viewport de referência para iPad Pro 13). Não houve overflow horizontal; o menu mobile abriu corretamente e os layouts do Hero e portfólio adaptaram-se aos breakpoints. A emulação não substitui validação num iPad físico.
 - S6-08 — Correções prioritárias: concluída em 06/11/2026. O rótulo pequeno de Projetos passou de `--rs-electric` para `--rs-sky`, elevando o contraste com `--rs-blue` de 3,02:1 para 4,92:1. O contorno de foco dos filtros passou de preto para `--rs-ice`, com contraste de 6,66:1 sobre o fundo da secção. Os restantes testes não comunicaram problemas adicionais; o build de produção foi validado após as alterações.
+- S6-09 — Preparação da produção: concluída em 06/11/2026. Build de produção validado; comandos, diretório de saída, branch e sequência de configuração do Cloudflare Pages registados em [`docs/CLOUDFLARE-PAGES-DEPLOY-CHECKLIST.md`](CLOUDFLARE-PAGES-DEPLOY-CHECKLIST.md). Após versionar este checklist, a branch `main` terá quatro commits locais por enviar ao GitHub. Contas não foram ligadas e nenhum deploy foi iniciado.
 
 ### Critérios de aceitação propostos
 
@@ -1415,4 +1416,4 @@ A plataforma escolhida para a publicação inicial é Cloudflare Pages, usando o
 
 ### Próximo passo
 
-Próximo passo: S6-09 — preparar a versão de produção e o checklist de publicação para Cloudflare Pages. S6-02 foi revista estaticamente; S6-03 a S6-08 foram concluídas. A janela de datas e as estimativas permanecem propostas; a publicação continua dependente da preparação e confirmação final do destino.
+Próximo passo: S6-10 — publicar no Cloudflare Pages após confirmação do destino e autorização para ligar o repositório GitHub. A integração Git pode publicar automaticamente novos commits da branch de produção; confirmar essa consequência antes da ligação. A janela de datas e as estimativas permanecem propostas.
