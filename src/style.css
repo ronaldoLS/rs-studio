@@ -190,7 +190,7 @@ main > section p { color: var(--rs-ice); }
 #projetos { background: var(--rs-blue); }
 #projetos h2 { color: var(--rs-ice); }
 #projetos p { color: var(--rs-ice); }
-#projetos > div > div > p.text-sm { color: var(--rs-electric); }
+#projetos > div > div > p.text-sm { color: var(--rs-sky); }
 #projetos #portfolio-grid { gap: 48px 24px; }
 #projetos #portfolio-grid > article { margin-top: 0; padding: 0; overflow: visible; border: 0; border-radius: 0; background: transparent; }
 #projetos .portfolio-trigger { border-radius: 8px; background: transparent; }
@@ -209,6 +209,7 @@ main > section p { color: var(--rs-ice); }
   transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease;
 }
 #projetos [data-category-filter]:hover { border-color: var(--rs-electric); }
+#projetos [data-category-filter]:focus-visible { outline-color: var(--rs-ice); }
 #projetos [data-category-filter]:active { transform: scale(.96); }
 #projetos [data-category-filter][aria-pressed="true"] { border-color: var(--rs-ice); background: var(--rs-ice); color: var(--rs-deep); }
 
