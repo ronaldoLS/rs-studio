@@ -1361,7 +1361,7 @@ O utilizador não indicou pontos adicionais para registar nem ações de melhori
 
 ## Sprint 6 — QA & Deploy: planeamento proposto
 
-**Estado:** em execução; a janela e os detalhes do backlog abaixo permanecem propostas. S6-01 a S6-08 concluídas em 06/11/2026; próximo passo S6-09.
+**Estado:** em execução; a janela e os detalhes do backlog abaixo permanecem propostas. S6-01 a S6-11 concluídas em 06/11/2026; falta Sprint Review e Retrospective.
 
 ### Sprint Goal
 
@@ -1398,7 +1398,9 @@ O utilizador não indicou pontos adicionais para registar nem ações de melhori
 - S6-06 — Compatibilidade cross-browser: concluída em 06/11/2026. O utilizador confirmou que a página passou nos testes em Chrome, Firefox e Edge, sem problemas encontrados.
 - S6-07 — Layouts mobile e tablet: concluída em 06/11/2026 por emulação responsiva. Foram verificados 320 × 740, 390 × 844, 768 × 1024 e 1032 × 1376 (viewport de referência para iPad Pro 13). Não houve overflow horizontal; o menu mobile abriu corretamente e os layouts do Hero e portfólio adaptaram-se aos breakpoints. A emulação não substitui validação num iPad físico.
 - S6-08 — Correções prioritárias: concluída em 06/11/2026. O rótulo pequeno de Projetos passou de `--rs-electric` para `--rs-sky`, elevando o contraste com `--rs-blue` de 3,02:1 para 4,92:1. O contorno de foco dos filtros passou de preto para `--rs-ice`, com contraste de 6,66:1 sobre o fundo da secção. Os restantes testes não comunicaram problemas adicionais; o build de produção foi validado após as alterações.
-- S6-09 — Preparação da produção: concluída em 06/11/2026. Build de produção validado; comandos, diretório de saída, branch e sequência de configuração do Cloudflare Pages registados em [`docs/CLOUDFLARE-PAGES-DEPLOY-CHECKLIST.md`](CLOUDFLARE-PAGES-DEPLOY-CHECKLIST.md). Após versionar este checklist, a branch `main` terá quatro commits locais por enviar ao GitHub. Contas não foram ligadas e nenhum deploy foi iniciado.
+- S6-09 — Preparação da produção: concluída em 06/11/2026. Build de produção validado; comandos, diretório de saída, branch e sequência de configuração do Cloudflare Pages registados em [`docs/CLOUDFLARE-PAGES-DEPLOY-CHECKLIST.md`](CLOUDFLARE-PAGES-DEPLOY-CHECKLIST.md). As alterações aprovadas foram enviadas a `origin/main` antes da criação do projeto Pages.
+- S6-10 — Publicação: concluída em 06/11/2026 no Cloudflare Pages. A integração GitHub foi autorizada apenas para `ronaldoLS/rs-studio`; production branch `main`, build `npm run build`, output `dist`. O hostname `rs-studio.pages.dev` não estava disponível, por isso o utilizador aprovou `rs-studio-pt.pages.dev`. O primeiro deploy do commit `9f5e966` terminou com sucesso e os deploys automáticos de `main` estão ativos.
+- S6-11 — Validação da publicação: concluída em 06/11/2026. O site abriu por HTTPS em `https://rs-studio-pt.pages.dev/`; título, descrição, logótipo, fundo do Hero, nove imagens de portfólio e imagem externa da Zaask carregaram. Foram percorridos os links internos, testados o filtro de Projetos e a abertura/fecho do diálogo, e conferidos os destinos dos links de contacto. A vista publicada em mobile não apresentou overflow horizontal. A emulação de tablet/iPad Pro 13 foi realizada anteriormente em S6-07.
 
 ### Critérios de aceitação propostos
 
@@ -1412,8 +1414,8 @@ O utilizador não indicou pontos adicionais para registar nem ações de melhori
 
 ### Decisão essencial antes do deploy
 
-A plataforma escolhida para a publicação inicial é Cloudflare Pages, usando o subdomínio gratuito `pages.dev`. O domínio próprio fica fora do âmbito atual. A ligação da conta GitHub e a publicação só serão feitas quando S6-09/S6-10 estiverem prontas e o utilizador confirmar o destino final.
+A plataforma escolhida é Cloudflare Pages, usando o subdomínio gratuito `rs-studio-pt.pages.dev`; `rs-studio.pages.dev` não estava disponível. O domínio próprio fica fora do âmbito atual. A integração GitHub tem acesso apenas ao repositório RS Studio e publica automaticamente commits em `main`, conforme autorizado pelo utilizador.
 
 ### Próximo passo
 
-Próximo passo: S6-10 — publicar no Cloudflare Pages após confirmação do destino e autorização para ligar o repositório GitHub. A integração Git pode publicar automaticamente novos commits da branch de produção; confirmar essa consequência antes da ligação. A janela de datas e as estimativas permanecem propostas.
+Próximo passo: realizar Sprint Review e Retrospective e encerrar a Sprint 6. O backlog S6-01 a S6-11 foi concluído; a janela de datas e as estimativas permanecem propostas.
