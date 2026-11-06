@@ -1395,6 +1395,8 @@ O utilizador não indicou pontos adicionais para registar nem ações de melhori
 - S6-03 — SEO básico: concluída em 06/11/2026. O `<title>` foi refinado para “RS Studio | Design e Desenvolvimento Digital” e foi adicionada uma meta description em português europeu, alinhada com os serviços apresentados. A hierarquia existente mantém um H1 no Hero, H2 nas secções e H3 para conteúdos subordinados; o título H2 do diálogo de projeto é preenchido dinamicamente.
 - S6-04 — Otimização de imagens: concluída em 06/11/2026. Três imagens grandes da galeria (duas de Archery Valley VR e uma de Fuel Rush) foram regravadas como JPEG qualidade 92, mantendo as dimensões originais e sem diferença visual relevante na comparação. O peso conjunto caiu de aproximadamente 1,85 MB para 0,53 MB (cerca de 72%). As imagens da galeria passaram a usar descodificação assíncrona; as restantes imagens foram mantidas porque já têm dimensões e peso reduzidos.
 - S6-05 — Performance de carregamento: concluída em 06/11/2026 por análise estática e build de produção. A folha de estilos externa da Oxanium foi retirada do `@import` CSS e colocada no `<head>` para ser descoberta mais cedo; foram adicionados `preconnect` a `fonts.googleapis.com` e `fonts.gstatic.com`. O fundo do Hero foi convertido de PNG para JPEG qualidade 90, mantendo as dimensões de 1672 × 941 e aparência visual equivalente; o recurso caiu de 1,59 MB para 0,15 MB (~90%). O carregamento da fonte continua dependente da Google Fonts, com fontes de sistema como fallback.
+- S6-06 — Compatibilidade cross-browser: concluída em 06/11/2026. O utilizador confirmou que a página passou nos testes em Chrome, Firefox e Edge, sem problemas encontrados.
+- S6-07 — Layouts mobile e tablet: concluída em 06/11/2026 por emulação responsiva. Foram verificados 320 × 740, 390 × 844, 768 × 1024 e 1032 × 1376 (viewport de referência para iPad Pro 13). Não houve overflow horizontal; o menu mobile abriu corretamente e os layouts do Hero e portfólio adaptaram-se aos breakpoints. A emulação não substitui validação num iPad físico.
 
 ### Critérios de aceitação propostos
 
@@ -1412,4 +1414,4 @@ A plataforma escolhida para a publicação inicial é Cloudflare Pages, usando o
 
 ### Próximo passo
 
-Próximo passo: S6-06 — verificar compatibilidade em Chrome, Edge e Firefox. S6-02 foi revista estaticamente e os contrastes identificados ficam para S6-08; S6-03, S6-04 e S6-05 foram concluídas. A janela de datas e as estimativas permanecem propostas; a publicação fica para depois das auditorias e da preparação de produção.
+Próximo passo: S6-08 — corrigir os problemas prioritários encontrados nas auditorias e testes, incluindo os dois contrastes registados em S6-02. S6-02 foi revista estaticamente; S6-03 a S6-07 foram concluídas. A janela de datas e as estimativas permanecem propostas; a publicação fica para depois das auditorias e da preparação de produção.
