@@ -347,6 +347,11 @@ html.motion-reveal #processo .grid article:nth-child(4) { transition-delay: 240m
   header nav li a { font-size: .82rem; }
 }
 
+@media (min-width: 1025px) and (max-width: 1440px) and (any-pointer: coarse) {
+  #hero { min-height: auto; padding-block: clamp(48px, 8vw, 80px); }
+  #hero::before { background-size: cover; background-position: 64% center; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
   #hero .flex.flex-wrap a:hover, #contato a[href^="mailto"]:hover,
