@@ -170,7 +170,7 @@ main > section p { color: var(--rs-ice); }
 #servicos .grid article p, #processo .grid article p { color: var(--rs-ice); }
 #servicos .grid article, #processo .grid article { transition: background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
 @media (hover: hover) and (pointer: fine) {
-  #servicos .grid article:hover, #processo .grid article:hover { background: ; box-shadow: 0 10px 28px rgb(0 0 0 / 18%); transform: translateY(-3px); }
+  #servicos .grid article:hover, #processo .grid article:hover { background-color: color-mix(in srgb, var(--rs-blue) 88%, white); box-shadow: 0 10px 28px rgb(0 0 0 / 18%); transform: translateY(-3px); }
 }
 
 #processo .grid { gap: var(--rs-space-4); }
